@@ -29,18 +29,20 @@ class Player {
 //=======================================
 //Player' s actions ingame             ||
 //=======================================
-   
-    
-    
-    func createCharacterTeam() {
-        
-    }
-    
+       
     func targetToAttack() {
         
     }
     
     func targetToHeal() {
+        
+    }
+    
+    func attack() {
+        
+    }
+    
+    func heal() {
         
     }
     

@@ -21,6 +21,8 @@
 		BFD7350C1F79422900CAABD6 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735061F79422900CAABD6 /* Players.swift */; };
 		BFD7350D1F79422900CAABD6 /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735071F79422900CAABD6 /* Sword.swift */; };
 		BFD7350F1F79427300CAABD6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7350E1F79427300CAABD6 /* main.swift */; };
+		BFD735111F794DE300CAABD6 /* gameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735101F794DE300CAABD6 /* gameOptions.swift */; };
+		BFD735131F79555900CAABD6 /* inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735121F79555900CAABD6 /* inputs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		BFD735061F79422900CAABD6 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		BFD735071F79422900CAABD6 /* Sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
 		BFD7350E1F79427300CAABD6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BFD735101F794DE300CAABD6 /* gameOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameOptions.swift; sourceTree = "<group>"; };
+		BFD735121F79555900CAABD6 /* inputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,17 +88,19 @@
 			isa = PBXGroup;
 			children = (
 				BFD7350E1F79427300CAABD6 /* main.swift */,
+				BFD735121F79555900CAABD6 /* inputs.swift */,
+				BFD735101F794DE300CAABD6 /* gameOptions.swift */,
 				BF4C65BF1F79159A008EDEDF /* Races.swift */,
+				BFD735061F79422900CAABD6 /* Players.swift */,
+				BFD735031F79422900CAABD6 /* Characters.swift */,
 				BF4C65C31F792225008EDEDF /* charactersTeam.swift */,
 				BF4C65C11F79219A008EDEDF /* strenght.swift */,
 				BF4C65C51F7930AF008EDEDF /* restoreHealth.swift */,
+				BF4C65C71F793ADC008EDEDF /* chest.swift */,
 				BFD735021F79422900CAABD6 /* boneAxe.swift */,
-				BFD735031F79422900CAABD6 /* Characters.swift */,
 				BFD735041F79422900CAABD6 /* Hammer.swift */,
 				BFD735051F79422900CAABD6 /* nightStick.swift */,
-				BFD735061F79422900CAABD6 /* Players.swift */,
 				BFD735071F79422900CAABD6 /* Sword.swift */,
-				BF4C65C71F793ADC008EDEDF /* chest.swift */,
 				BF4C65CB1F793C60008EDEDF /* bonusWeapon2.swift */,
 				BF4C65C91F793BD2008EDEDF /* bonusWeapon1.swift */,
 			);
@@ -160,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4C65C41F792225008EDEDF /* charactersTeam.swift in Sources */,
+				BFD735111F794DE300CAABD6 /* gameOptions.swift in Sources */,
 				BF4C65C61F7930AF008EDEDF /* restoreHealth.swift in Sources */,
 				BFD735081F79422900CAABD6 /* boneAxe.swift in Sources */,
 				BFD7350D1F79422900CAABD6 /* Sword.swift in Sources */,
@@ -168,6 +175,7 @@
 				BF4C65C21F79219A008EDEDF /* strenght.swift in Sources */,
 				BF4C65CA1F793BD2008EDEDF /* bonusWeapon1.swift in Sources */,
 				BFD7350F1F79427300CAABD6 /* main.swift in Sources */,
+				BFD735131F79555900CAABD6 /* inputs.swift in Sources */,
 				BFD7350C1F79422900CAABD6 /* Players.swift in Sources */,
 				BFD735091F79422900CAABD6 /* Characters.swift in Sources */,
 				BF4C65CC1F793C60008EDEDF /* bonusWeapon2.swift in Sources */,
