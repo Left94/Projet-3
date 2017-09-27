@@ -13,10 +13,12 @@ print("Welcome to the game!!")
 
 
 
-var player1 = Player(playerName: "", playerNumber: 1)
-var player2 = Player(playerName: "", playerNumber: 2)
+print("Welcome to the game!!")
 
-var team1 = CharactersTeam(teamNumber: 1, charactersName: "")
-var team2 = CharactersTeam(teamNumber: 2, charactersName: "")
 
-var team1members: [Int : Race]
+print("Please enter your name!")
+var player1 = Players()
+player1.playerName = readLine()!
+player1.welcome()
+
+print("Select your team")

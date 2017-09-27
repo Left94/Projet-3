@@ -13,19 +13,12 @@ import Foundation
 //=======================================
 //Player' s class                      ||
 //=======================================
-
-class Player {
+class Players {
     
-    var playerName : String
-    var playerNumber : Int
+    var playerName = ""
     
-    
-    init(playerName : String, playerNumber : Int) {
-      self.playerName = playerName
-      self.playerNumber = playerNumber
-        
-        
-    }
+    func welcome(){
+        print("welcome \(playerName)")
 //=======================================
 //Player' s actions ingame             ||
 //=======================================
@@ -47,4 +40,5 @@ class Player {
     }
     
     
+ }
 }
