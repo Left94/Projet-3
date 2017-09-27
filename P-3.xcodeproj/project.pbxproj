@@ -12,8 +12,6 @@
 		BF4C65C41F792225008EDEDF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C31F792225008EDEDF /* Team.swift */; };
 		BF4C65C61F7930AF008EDEDF /* Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C51F7930AF008EDEDF /* Recovery.swift */; };
 		BF4C65C81F793ADC008EDEDF /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C71F793ADC008EDEDF /* Chest.swift */; };
-		BF4C65CA1F793BD2008EDEDF /* BonusWeapon1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */; };
-		BF4C65CC1F793C60008EDEDF /* BonusWeapon2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */; };
 		BFD735081F79422900CAABD6 /* BoneAxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735021F79422900CAABD6 /* BoneAxe.swift */; };
 		BFD735091F79422900CAABD6 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735031F79422900CAABD6 /* Characters.swift */; };
 		BFD7350A1F79422900CAABD6 /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735041F79422900CAABD6 /* Hammer.swift */; };
@@ -44,8 +42,6 @@
 		BF4C65C31F792225008EDEDF /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		BF4C65C51F7930AF008EDEDF /* Recovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recovery.swift; sourceTree = "<group>"; };
 		BF4C65C71F793ADC008EDEDF /* Chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
-		BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonusWeapon1.swift; sourceTree = "<group>"; };
-		BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonusWeapon2.swift; sourceTree = "<group>"; };
 		BFD735021F79422900CAABD6 /* BoneAxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoneAxe.swift; sourceTree = "<group>"; };
 		BFD735031F79422900CAABD6 /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		BFD735041F79422900CAABD6 /* Hammer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
@@ -101,8 +97,6 @@
 				BFD735041F79422900CAABD6 /* Hammer.swift */,
 				BFD735051F79422900CAABD6 /* NightStick.swift */,
 				BFD735071F79422900CAABD6 /* Sword.swift */,
-				BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */,
-				BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */,
 			);
 			path = "P-3";
 			sourceTree = "<group>";
@@ -174,12 +168,10 @@
 				BFD7350B1F79422900CAABD6 /* NightStick.swift in Sources */,
 				BFD7350A1F79422900CAABD6 /* Hammer.swift in Sources */,
 				BF4C65C21F79219A008EDEDF /* Strenght.swift in Sources */,
-				BF4C65CA1F793BD2008EDEDF /* BonusWeapon1.swift in Sources */,
 				BFD7350F1F79427300CAABD6 /* main.swift in Sources */,
 				BFD735131F79555900CAABD6 /* inputs.swift in Sources */,
 				BFD7350C1F79422900CAABD6 /* Players.swift in Sources */,
 				BFD735091F79422900CAABD6 /* Characters.swift in Sources */,
-				BF4C65CC1F793C60008EDEDF /* BonusWeapon2.swift in Sources */,
 				BF4C65C81F793ADC008EDEDF /* Chest.swift in Sources */,
 				BF4C65C01F79159A008EDEDF /* Races.swift in Sources */,
 			);
