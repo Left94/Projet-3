@@ -13,7 +13,7 @@ import Foundation
 // Character class                                           ||
 //==============================================================
 
-class Character {
+class Characters {
     
     var race: Race
     var strenght: Strenght

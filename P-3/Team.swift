@@ -13,15 +13,69 @@ import Foundation
 //=========================
 
 
-class CharactersTeam {
+class Team {
     
-    var teamNumber : Int
-    var charactersName : String
+    var teamCharacters = [Race.dwarf, Race.giant, Race.warrior, Race.wizard]
     
-    init(teamNumber : Int, charactersName : String) {
+    
+    func selectYourFirstCharacter(){
+        if let choice = readLine() {
+            switch choice {
+            case "1":
+                teamCharacters = [Race.dwarf]
+                print("Rename your Dwarf")
+            case "2":
+                teamCharacters = [Race.giant]
+                print("Rename your Giant")
+            case "3":
+                teamCharacters = [Race.warrior]
+                print("Rename your Warrior")
+            case "4" :
+                teamCharacters = [Race.wizard]
+                print("Rename your Wizard")
+                
+            default:
+                print("")
+            }
+            
+        }
         
-      self.teamNumber = teamNumber
-      self.charactersName = charactersName
     }
     
+    
+    
+    
+    func selectYourSecondCharacter(){
+        
+ }
+    
+    
+    
+    
+    func selectYourThirdCharacter(){
+        
+ }
+    func nameYourFirstCharacter() {
+        if let charactersName1 = readLine(){
+            print("\(charactersName1) is ready to fight !")
+        }
+        
+    }
+    
+    func nameYourSecondCharacter() {
+        if let charactersName2 = readLine(){
+            print("\(charactersName2) is ready to fight !")
+        }
+        
+        
+    }
+    
+    func nameYourThirdCharacter() {
+        if let charactersName3 = readLine(){
+            print("\(charactersName3) is ready to fight !")
+            
+        }
+        
+}
+
 }

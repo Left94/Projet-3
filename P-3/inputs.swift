@@ -15,14 +15,9 @@
 import Foundation
 
 
-func inputName() {
-    if let name = readLine(){
-        print("Welcome in game \(name)")
+
         
-        
-    }
-    
-}
+
 
 func inputCharacters1Name() {
     if let charactersName1 = readLine(){

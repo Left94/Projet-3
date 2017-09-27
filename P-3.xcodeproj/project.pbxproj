@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		BF4C65C01F79159A008EDEDF /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65BF1F79159A008EDEDF /* Races.swift */; };
-		BF4C65C21F79219A008EDEDF /* strenght.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C11F79219A008EDEDF /* strenght.swift */; };
-		BF4C65C41F792225008EDEDF /* charactersTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C31F792225008EDEDF /* charactersTeam.swift */; };
-		BF4C65C61F7930AF008EDEDF /* restoreHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C51F7930AF008EDEDF /* restoreHealth.swift */; };
-		BF4C65C81F793ADC008EDEDF /* chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C71F793ADC008EDEDF /* chest.swift */; };
-		BF4C65CA1F793BD2008EDEDF /* bonusWeapon1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C91F793BD2008EDEDF /* bonusWeapon1.swift */; };
-		BF4C65CC1F793C60008EDEDF /* bonusWeapon2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65CB1F793C60008EDEDF /* bonusWeapon2.swift */; };
-		BFD735081F79422900CAABD6 /* boneAxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735021F79422900CAABD6 /* boneAxe.swift */; };
+		BF4C65C21F79219A008EDEDF /* Strenght.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C11F79219A008EDEDF /* Strenght.swift */; };
+		BF4C65C41F792225008EDEDF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C31F792225008EDEDF /* Team.swift */; };
+		BF4C65C61F7930AF008EDEDF /* Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C51F7930AF008EDEDF /* Recovery.swift */; };
+		BF4C65C81F793ADC008EDEDF /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C71F793ADC008EDEDF /* Chest.swift */; };
+		BF4C65CA1F793BD2008EDEDF /* BonusWeapon1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */; };
+		BF4C65CC1F793C60008EDEDF /* BonusWeapon2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */; };
+		BFD735081F79422900CAABD6 /* BoneAxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735021F79422900CAABD6 /* BoneAxe.swift */; };
 		BFD735091F79422900CAABD6 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735031F79422900CAABD6 /* Characters.swift */; };
 		BFD7350A1F79422900CAABD6 /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735041F79422900CAABD6 /* Hammer.swift */; };
-		BFD7350B1F79422900CAABD6 /* nightStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735051F79422900CAABD6 /* nightStick.swift */; };
+		BFD7350B1F79422900CAABD6 /* NightStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735051F79422900CAABD6 /* NightStick.swift */; };
 		BFD7350C1F79422900CAABD6 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735061F79422900CAABD6 /* Players.swift */; };
 		BFD7350D1F79422900CAABD6 /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735071F79422900CAABD6 /* Sword.swift */; };
 		BFD7350F1F79427300CAABD6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7350E1F79427300CAABD6 /* main.swift */; };
-		BFD735111F794DE300CAABD6 /* gameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735101F794DE300CAABD6 /* gameOptions.swift */; };
+		BFD735111F794DE300CAABD6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735101F794DE300CAABD6 /* Options.swift */; };
 		BFD735131F79555900CAABD6 /* inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD735121F79555900CAABD6 /* inputs.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,20 +40,20 @@
 /* Begin PBXFileReference section */
 		BF4C65A71F7913F2008EDEDF /* P-3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "P-3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4C65BF1F79159A008EDEDF /* Races.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
-		BF4C65C11F79219A008EDEDF /* strenght.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strenght.swift; sourceTree = "<group>"; };
-		BF4C65C31F792225008EDEDF /* charactersTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = charactersTeam.swift; sourceTree = "<group>"; };
-		BF4C65C51F7930AF008EDEDF /* restoreHealth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restoreHealth.swift; sourceTree = "<group>"; };
-		BF4C65C71F793ADC008EDEDF /* chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
-		BF4C65C91F793BD2008EDEDF /* bonusWeapon1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bonusWeapon1.swift; sourceTree = "<group>"; };
-		BF4C65CB1F793C60008EDEDF /* bonusWeapon2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bonusWeapon2.swift; sourceTree = "<group>"; };
-		BFD735021F79422900CAABD6 /* boneAxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boneAxe.swift; sourceTree = "<group>"; };
+		BF4C65C11F79219A008EDEDF /* Strenght.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strenght.swift; sourceTree = "<group>"; };
+		BF4C65C31F792225008EDEDF /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		BF4C65C51F7930AF008EDEDF /* Recovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recovery.swift; sourceTree = "<group>"; };
+		BF4C65C71F793ADC008EDEDF /* Chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
+		BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonusWeapon1.swift; sourceTree = "<group>"; };
+		BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonusWeapon2.swift; sourceTree = "<group>"; };
+		BFD735021F79422900CAABD6 /* BoneAxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoneAxe.swift; sourceTree = "<group>"; };
 		BFD735031F79422900CAABD6 /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		BFD735041F79422900CAABD6 /* Hammer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
-		BFD735051F79422900CAABD6 /* nightStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightStick.swift; sourceTree = "<group>"; };
+		BFD735051F79422900CAABD6 /* NightStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightStick.swift; sourceTree = "<group>"; };
 		BFD735061F79422900CAABD6 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		BFD735071F79422900CAABD6 /* Sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
 		BFD7350E1F79427300CAABD6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		BFD735101F794DE300CAABD6 /* gameOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameOptions.swift; sourceTree = "<group>"; };
+		BFD735101F794DE300CAABD6 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		BFD735121F79555900CAABD6 /* inputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,20 +89,20 @@
 			children = (
 				BFD7350E1F79427300CAABD6 /* main.swift */,
 				BFD735121F79555900CAABD6 /* inputs.swift */,
-				BFD735101F794DE300CAABD6 /* gameOptions.swift */,
+				BFD735101F794DE300CAABD6 /* Options.swift */,
 				BF4C65BF1F79159A008EDEDF /* Races.swift */,
 				BFD735061F79422900CAABD6 /* Players.swift */,
 				BFD735031F79422900CAABD6 /* Characters.swift */,
-				BF4C65C31F792225008EDEDF /* charactersTeam.swift */,
-				BF4C65C11F79219A008EDEDF /* strenght.swift */,
-				BF4C65C51F7930AF008EDEDF /* restoreHealth.swift */,
-				BF4C65C71F793ADC008EDEDF /* chest.swift */,
-				BFD735021F79422900CAABD6 /* boneAxe.swift */,
+				BF4C65C31F792225008EDEDF /* Team.swift */,
+				BF4C65C11F79219A008EDEDF /* Strenght.swift */,
+				BF4C65C51F7930AF008EDEDF /* Recovery.swift */,
+				BF4C65C71F793ADC008EDEDF /* Chest.swift */,
+				BFD735021F79422900CAABD6 /* BoneAxe.swift */,
 				BFD735041F79422900CAABD6 /* Hammer.swift */,
-				BFD735051F79422900CAABD6 /* nightStick.swift */,
+				BFD735051F79422900CAABD6 /* NightStick.swift */,
 				BFD735071F79422900CAABD6 /* Sword.swift */,
-				BF4C65CB1F793C60008EDEDF /* bonusWeapon2.swift */,
-				BF4C65C91F793BD2008EDEDF /* bonusWeapon1.swift */,
+				BF4C65CB1F793C60008EDEDF /* BonusWeapon2.swift */,
+				BF4C65C91F793BD2008EDEDF /* BonusWeapon1.swift */,
 			);
 			path = "P-3";
 			sourceTree = "<group>";
@@ -134,11 +134,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "vincent ";
 				TargetAttributes = {
 					BF4C65A61F7913F2008EDEDF = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -165,21 +166,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4C65C41F792225008EDEDF /* charactersTeam.swift in Sources */,
-				BFD735111F794DE300CAABD6 /* gameOptions.swift in Sources */,
-				BF4C65C61F7930AF008EDEDF /* restoreHealth.swift in Sources */,
-				BFD735081F79422900CAABD6 /* boneAxe.swift in Sources */,
+				BF4C65C41F792225008EDEDF /* Team.swift in Sources */,
+				BFD735111F794DE300CAABD6 /* Options.swift in Sources */,
+				BF4C65C61F7930AF008EDEDF /* Recovery.swift in Sources */,
+				BFD735081F79422900CAABD6 /* BoneAxe.swift in Sources */,
 				BFD7350D1F79422900CAABD6 /* Sword.swift in Sources */,
-				BFD7350B1F79422900CAABD6 /* nightStick.swift in Sources */,
+				BFD7350B1F79422900CAABD6 /* NightStick.swift in Sources */,
 				BFD7350A1F79422900CAABD6 /* Hammer.swift in Sources */,
-				BF4C65C21F79219A008EDEDF /* strenght.swift in Sources */,
-				BF4C65CA1F793BD2008EDEDF /* bonusWeapon1.swift in Sources */,
+				BF4C65C21F79219A008EDEDF /* Strenght.swift in Sources */,
+				BF4C65CA1F793BD2008EDEDF /* BonusWeapon1.swift in Sources */,
 				BFD7350F1F79427300CAABD6 /* main.swift in Sources */,
 				BFD735131F79555900CAABD6 /* inputs.swift in Sources */,
 				BFD7350C1F79422900CAABD6 /* Players.swift in Sources */,
 				BFD735091F79422900CAABD6 /* Characters.swift in Sources */,
-				BF4C65CC1F793C60008EDEDF /* bonusWeapon2.swift in Sources */,
-				BF4C65C81F793ADC008EDEDF /* chest.swift in Sources */,
+				BF4C65CC1F793C60008EDEDF /* BonusWeapon2.swift in Sources */,
+				BF4C65C81F793ADC008EDEDF /* Chest.swift in Sources */,
 				BF4C65C01F79159A008EDEDF /* Races.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +198,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -205,7 +208,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -246,7 +253,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -254,7 +263,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -274,6 +287,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -281,7 +295,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -289,7 +304,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -9,16 +9,23 @@
 import Foundation
 
 
-print("Welcome to the game!!")
+print("Welcome Player 1 !!")
 
 
 
-print("Welcome to the game!!")
 
-
-print("Please enter your name!")
+print("What is your name?")
 var player1 = Players()
 player1.playerName = readLine()!
 player1.welcome()
 
-print("Select your team")
+
+print("Now, create your team, Choose your first character in the list below"
+    + "\n1. Dwarf"
+    + "\n2. Giant"
+    + "\n3. Warrior"
+    + "\n4. Wizard")
+var team1 = Team()
+team1.selectYourFirstCharacter()
+team1.nameYourFirstCharacter()
+
