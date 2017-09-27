@@ -21,5 +21,10 @@ class Weapon {
         
         self.name = name
         self.dammage = dammage
+        
     }
 }
+var warriorWeapon = Weapon(name: "Stone Axe", dammage: 55)
+var dwarfWeapon = Weapon(name: "Bone Axe", dammage: 75)
+var giantWeapon = Weapon(name: "Hammer", dammage: 45)
+

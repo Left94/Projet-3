@@ -11,6 +11,7 @@ import Foundation
 
 print("Welcome Player 1 !!")
 
+print("\(giantWeapon.name)")
 
-
-
+print("\(giantWeapon.dammage)")
+print("\(warrior.name)")
