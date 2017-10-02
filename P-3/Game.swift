@@ -13,20 +13,28 @@ import Foundation
 
 class Game {
   
-    var player1 : Player
-    var player2 : Player
+    var player : Player
     
     
-    init(player1 : Player , player2 : Player ) {
+    
+    init( player : Player ) {
         
-        self.player1 = player1
-        self.player2 = player2
+        self.player = player
     }
     
+
+    
+    
+    
+    
+    
     func initGame() {
+        
+    print("Welcome to the game , please create your team")
         
     }
     
     
     
 }
+

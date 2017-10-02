@@ -15,18 +15,32 @@ import Foundation
 class Player {
     
     
-    var team : [GameCharacter]
     
-    init(team : [GameCharacter]) {
-        
-       
-        self.team = team
+    var teamMembers : [GameCharacter] = []
+    let playerId : Int
+    
+    
+    init(playerId : Int) {
+        self.playerId = playerId
     }
-}
     
     
+
+
+
+
+
+
+
+
+func selectGameCharacter(teamMembers : [GameCharacter])  {
+        
+        
     
-    
+    }
+
+
+
     func createTeam () {
         
         
@@ -40,10 +54,9 @@ class Player {
     
 
 
-    func selectGameCharacter(team : [GameCharacter])  {
-        
-    }
+
         
 
 
 
+}

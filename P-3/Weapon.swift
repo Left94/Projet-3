@@ -14,17 +14,15 @@ import Foundation
 
 class Weapon {
     
-    var name : String
-    var dammage : Int
+    enum WeaponType {
+        
+        case HealingWeapon      //weapon' s type
+        case DamagingWeapon
     
-    init ( name : String , dammage : Int ) {
-        
-        self.name = name
-        self.dammage = dammage
-        
     }
+    
+    var damagePoints : Int?     //weapon' s stat
+    var healingPoints : Int?
+    var type : WeaponType?
 }
-var warriorWeapon = Weapon(name: "Stone Axe", dammage: 55)
-var dwarfWeapon = Weapon(name: "Bone Axe", dammage: 75)
-var giantWeapon = Weapon(name: "Hammer", dammage: 45)
 
