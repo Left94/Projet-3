@@ -23,11 +23,11 @@ class GameCharacter {
         self.life = life
         self.weapon = weapon
         }
-}
+    }
  var warrior = GameCharacter(name: "warrior", life: 100, weapon: warriorWeapon)
  var dwarf = GameCharacter(name: "dwarf", life: 70, weapon: dwarfWeapon)
  var giant = GameCharacter(name: "giant", life: 200, weapon: giantWeapon)
-
+ 
     func attack (target : GameCharacter) {
         
     }
