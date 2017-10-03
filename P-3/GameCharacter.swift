@@ -22,22 +22,50 @@ class GameCharacter {
         case wizard
     }
 
-    var name: String?
-    var number: Int?
-    var type: GameCharacterRace?
-    var healthPoints: Int?
-    var stayingHealth: Int?
+    var name: String?               //name of the game character rename from the player
+    var id: Int?                    //id of the game character to select for create team
+    var type: GameCharacterRace?    //type of the game character from the race enum
+    var healthPoints: Int?          //life points of the game character at the start of the battle
+    var stayingHealth: Int?         //life points during the battle
     var weapon: Weapon?
+    var hitPoints: Int {            // hit points from the damage points of the weapon
+        if let used = weapon {
+            return used.damagePoints!
+        } else {
+        return 0
+        }
+    }
     
-
-        func takeDamage(damage : Int) {
-             print("\(self.name!) has been hit and received \(damage)")
-        }
+    
+    
+    func attack(target : GameCharacter) {      //game character selected received damage from weapon
+        print("\(self.name!) decide to attack \(target.name!) ")
+        target.takeDamage(damage: (self.hitPoints))
         
-        func attack(target : GameCharacter) {
-            print("\(self.name!) decide to attack \(target.name!) ")
-            target.takeDamage(damage: (weapon?.damagePoints)!)
+    }
+    
+    
+    func takeDamage(damage : Int) {       //game character's life decrease of weapon's damages pts
+        print("\(self.name!) has been hit and received \(damage)")
+        stayingHealth! -= damage
+        if stayingHealth! <= 0 {
+            print("\(self.name!)has been killed !")
         }
+    }
+    
+    
+    
+    func recoverHP (hp : Int) {            //game character's life increase of weapon's healing pts
+        print("\(self.name!) has been health and recover \(hp)")
+        stayingHealth! += hp
+        
+    }
+    
+    
+    
+    
+        
+    
     
         
 }

@@ -22,6 +22,9 @@ class Wizard : GameCharacter {
         
     }
     
-    
+    func health (target : GameCharacter) {//game character selected received healing pts from weapon
+        target.recoverHP(hp: self.weapon!.healingPoints!)
+        
+    }
     
 }
