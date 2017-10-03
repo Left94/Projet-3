@@ -18,6 +18,7 @@
 		BFA4E28E1F7C3EA2004AC714 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4E28D1F7C3EA2004AC714 /* Player.swift */; };
 		BFA4E2901F7C3EBD004AC714 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4E28F1F7C3EBD004AC714 /* GameCharacter.swift */; };
 		BFA4E2921F7C3ED3004AC714 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4E2911F7C3ED3004AC714 /* Weapon.swift */; };
+		BFD53D201F83A6DF00D99122 /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD53D1F1F83A6DF00D99122 /* Hammer.swift */; };
 		BFD7350F1F79427300CAABD6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7350E1F79427300CAABD6 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		BFA4E28D1F7C3EA2004AC714 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BFA4E28F1F7C3EBD004AC714 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
 		BFA4E2911F7C3ED3004AC714 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		BFD53D1F1F83A6DF00D99122 /* Hammer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
 		BFD7350E1F79427300CAABD6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				BF9685DB1F827807001749A1 /* Warrior.swift */,
 				BF9685E51F828F16001749A1 /* Sword.swift */,
 				BF9685DD1F827821001749A1 /* Giant.swift */,
+				BFD53D1F1F83A6DF00D99122 /* Hammer.swift */,
 				BFA4E28D1F7C3EA2004AC714 /* Player.swift */,
 			);
 			path = "P-3";
@@ -164,6 +167,7 @@
 				BF9685DA1F8277F2001749A1 /* Dwarf.swift in Sources */,
 				BFA4E2901F7C3EBD004AC714 /* GameCharacter.swift in Sources */,
 				BFA4E28E1F7C3EA2004AC714 /* Player.swift in Sources */,
+				BFD53D201F83A6DF00D99122 /* Hammer.swift in Sources */,
 				BFA4E28C1F7C3E85004AC714 /* Game.swift in Sources */,
 				BF9685E41F828E1E001749A1 /* Axe.swift in Sources */,
 			);
