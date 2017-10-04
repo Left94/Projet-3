@@ -11,7 +11,6 @@ import Foundation
 
 
 
-
 class Player {
     
     
@@ -33,11 +32,30 @@ class Player {
 
 
 
-func selectGameCharacter(teamMembers : [GameCharacter])  {
+    func selectGameCharacter()->GameCharacter  {
+    
+    print("Please select your team players")
+    print("Enter a number between 1 and 4")
+    var newCharacter : GameCharacter?
+    var inputType : Bool
+    inputType = true
+    let choice = readLine()!
         
+        switch choice {
+        case "1" : newCharacter = Dwarf()
+        case "2" : newCharacter = Giant()
+        case "3" : newCharacter = Warrior()
+        case "4" : newCharacter = Wizard()
+        default: inputType = false
+            
+        }
+    
+     return newCharacter!
+        
+    }
         
     
-    }
+   
 
 
 
@@ -60,3 +78,4 @@ func selectGameCharacter(teamMembers : [GameCharacter])  {
 
 
 }
+

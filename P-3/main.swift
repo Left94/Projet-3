@@ -13,3 +13,7 @@ import Foundation
 
 
 
+
+var player = Player(playerId : 1)
+
+player.createTeam()

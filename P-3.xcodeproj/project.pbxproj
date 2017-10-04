@@ -83,6 +83,7 @@
 			children = (
 				BFD7350E1F79427300CAABD6 /* main.swift */,
 				BFA4E28B1F7C3E85004AC714 /* Game.swift */,
+				BFA4E28D1F7C3EA2004AC714 /* Player.swift */,
 				BFA4E28F1F7C3EBD004AC714 /* GameCharacter.swift */,
 				BFA4E2911F7C3ED3004AC714 /* Weapon.swift */,
 				BF9685DF1F827831001749A1 /* Wizard.swift */,
@@ -93,7 +94,6 @@
 				BF9685E51F828F16001749A1 /* Sword.swift */,
 				BF9685DD1F827821001749A1 /* Giant.swift */,
 				BFD53D1F1F83A6DF00D99122 /* Hammer.swift */,
-				BFA4E28D1F7C3EA2004AC714 /* Player.swift */,
 			);
 			path = "P-3";
 			sourceTree = "<group>";

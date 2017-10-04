@@ -16,7 +16,7 @@ class Giant : GameCharacter {
     override init () {
         super.init()
         
-        type = GameCharacterRace.giant  //character' s race
+        type = GameCharacterRace.Giant  //character' s race
         healthPoints = 130              //life point
         stayingHealth = healthPoints    //life point staying
         

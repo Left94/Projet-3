@@ -16,10 +16,10 @@ class GameCharacter {
    
     enum GameCharacterRace {
         
-        case warrior
-        case giant
-        case dwarf
-        case wizard
+        case Warrior
+        case Giant
+        case Dwarf
+        case Wizard
     }
 
     var name: String?               //name of the game character rename from the player
