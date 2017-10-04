@@ -12,9 +12,9 @@ import Foundation
 
 
 
-class GameCharacter {
+class GameCharacter  {
    
-    enum GameCharacterRace {
+    enum GameCharacterRace  {
         
         case Warrior
         case Giant

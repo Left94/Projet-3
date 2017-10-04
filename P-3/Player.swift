@@ -35,7 +35,13 @@ class Player {
     func selectGameCharacter()->GameCharacter  {
     
     print("Please select your team players")
-    print("Enter a number between 1 and 4")
+    print()
+    print("Enter a number between 1 and 4:")
+    print()
+    print("1------>Dwarf-------->Smaller but Stronger->Weapon: Axe,   Damage: 70------->Health: 50pts" )
+    print("2------>Giant-------->A good Tank---------->Weapon: Hammer,Damage: 40------->Health: 130pts" )
+    print("3------>Warrior------>A good fighter------->Weapon: Sword, Damage: 50------->Health: 90pts" )
+    print("4------>Wizard------->Just a Healer-------->Weapon: Stick, RecoverSkill: 40->Health: 70pts" )
     var newCharacter : GameCharacter?
     var inputType : Bool?
     
@@ -68,6 +74,10 @@ class Player {
 
 
     func createTeam () {
+        
+       
+        
+            
         
         
         

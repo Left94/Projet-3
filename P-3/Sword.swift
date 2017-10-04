@@ -17,7 +17,7 @@ class Sword : Weapon {
         super.init()
         
         
-        damagePoints = 40
+        damagePoints = 50
         type = WeaponType.DamagingWeapon
         
         

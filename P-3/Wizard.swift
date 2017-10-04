@@ -16,7 +16,7 @@ class Wizard : GameCharacter {
     override init () {
     super.init()
         
-        type = GameCharacterRace.Wizard     //character' race
+      type = GameCharacterRace.Wizard     //character' race
       healthPoints = 70                   //life points
       stayingHealth = healthPoints        //life points staying
         

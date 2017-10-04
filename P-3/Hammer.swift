@@ -17,7 +17,7 @@ class Hammer : Weapon {
         super.init()
         
         
-        damagePoints = 50
+        damagePoints = 40
         type = WeaponType.DamagingWeapon
         
         
