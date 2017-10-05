@@ -19,3 +19,5 @@ var player = Player(playerId : 1)
 player.createTeam()
 player.selectGameCharacter()
 
+print("\(player.teamMembers)")
+

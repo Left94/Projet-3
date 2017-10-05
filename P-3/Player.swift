@@ -43,7 +43,10 @@ class Player {
     print("3------>Warrior------>A good fighter------->Weapon: Sword, Damage: 50------->Health: 90pts" )
     print("4------>Wizard------->Just a Healer-------->Weapon: Stick, RecoverSkill: 40->Health: 70pts" )
     var newCharacter : GameCharacter?
-    var inputType : Bool?
+    var characterNumber : Int
+        
+        
+        var inputType : Bool?
     
     
       
@@ -53,12 +56,16 @@ class Player {
         let choice = readLine()!
         switch choice {
         case "1" : newCharacter = Dwarf()
+                   characterNumber = 1
             print("You selected Dwarf")
         case "2" : newCharacter = Giant()
+                   characterNumber = 2
             print("You selected Giant")
         case "3" : newCharacter = Warrior()
+                   characterNumber = 3
             print("You selected Warrior")
         case "4" : newCharacter = Wizard()
+                   characterNumber = 4
             print("You selected Wizard")
         default: inputType = false
             print("Choice is wrong, please select a number between 1 and 4")
@@ -66,6 +73,21 @@ class Player {
         }
     
      }while !inputType!
+        
+        
+        print("rename your character")
+        var inputName : Bool?
+        
+        
+        repeat {
+        inputName = true
+        newCharacter!.name = readLine()!
+            print("Welcome on board \(String(describing: newCharacter?.name))")
+        }while !inputName!
+        
+        
+        
+        teamMembers.append(newCharacter!)
         return newCharacter!
         
     }
@@ -74,7 +96,13 @@ class Player {
 
 
     func createTeam () {
+    
         
+    
+        for inputNumber in 0...1 {
+            selectGameCharacter()
+            
+        }
        
         
             
