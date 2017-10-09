@@ -15,7 +15,7 @@ class Warrior : GameCharacter {
     
     override init () {
         super.init()
-        
+        id = 3
         type = GameCharacterRace.Warrior  //character' s race
         healthPoints = 90                 //life point
         stayingHealth = healthPoints      //life point staying

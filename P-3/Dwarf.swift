@@ -15,7 +15,7 @@ class Dwarf : GameCharacter {
     
     override init () {
         super.init()
-        
+        id = 1
         type = GameCharacterRace.Dwarf    //character' s race
         healthPoints = 50                 //life points
         stayingHealth = healthPoints      //life points staying

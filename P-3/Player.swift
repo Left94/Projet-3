@@ -22,7 +22,13 @@ class Player {
         self.playerId = playerId
         
     }
-   
+
+    
+    
+    
+    
+    
+    
     
 //===================================================================
 //Func to see if the input name of the game character already exist||
@@ -41,7 +47,7 @@ class Player {
 //===================================================================
 
 
-    func selectGameCharacter()  {
+    func selectGameCharacter () {
     
     print("Please select your team's characters")
     print()
@@ -123,25 +129,27 @@ class Player {
     
     
     func createTeam () {
-        var inputNumber = 0
-        while inputNumber < 2 {
+        for _ in 0...2 {
             
-            inputNumber += 1
-            
-        }
-    
-    
-    
-    
-    
-        
-            
-        
-        
-        
+            selectGameCharacter()
+                
+                   }
     }
-    
-    func fight () {
+        
+    func generateTheTeam() {
+        print()
+        print("Here is the Player's \(playerId) team:")
+        for renamed in teamMembers {
+            print("Good luck to \(renamed.name!) who will play as a \(renamed.type!)!")
+        }
+    }
+        
+        
+        
+        
+        
+        
+        func fight () {
         
     }
     
@@ -154,4 +162,5 @@ class Player {
 
 
 }
+
 
