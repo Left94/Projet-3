@@ -16,25 +16,34 @@ class Player {
     
     
     var teamMembers : [GameCharacter] = []
-    let playerId : Int
+    var playerId : Int
     
-    
-    init(playerId : Int) {
+    init(playerId : Int ) {
         self.playerId = playerId
+        
     }
+   
     
+//===================================================================
+//Func to see if the input name of the game character already exist||
+//===================================================================
+    func nameAlreadyExist(equal name : String )-> Bool {
+        var alreadyExist = false
+        for gameCharacterExist in teamMembers {
+            if name == gameCharacterExist.name! {
+                alreadyExist = true
+            }
+        }
+        return alreadyExist
+    }
+//===================================================================
+//func to select the game characters for the team player           ||
+//===================================================================
+
+
+    func selectGameCharacter()  {
     
-
-
-
-
-
-
-
-
-    func selectGameCharacter()->GameCharacter  {
-    
-    print("Please select your team players")
+    print("Please select your team's characters")
     print()
     print("Enter a number between 1 and 4:")
     print()
@@ -42,68 +51,89 @@ class Player {
     print("2------>Giant-------->A good Tank---------->Weapon: Hammer,Damage: 40------->Health: 130pts" )
     print("3------>Warrior------>A good fighter------->Weapon: Sword, Damage: 50------->Health: 90pts" )
     print("4------>Wizard------->Just a Healer-------->Weapon: Stick, RecoverSkill: 40->Health: 70pts" )
+    
+     
     var newCharacter : GameCharacter?
-    var characterNumber : Int
+    var inputType : Bool?
+    var inputName : Bool
+    var characterNumber : Int?
         
-        
-        var inputType : Bool?
-    
-    
-      
-        
+// Player has to selected his member' s team
         repeat {
         inputType = true
-        let choice = readLine()!
+            if let choice = readLine(){
         switch choice {
         case "1" : newCharacter = Dwarf()
                    characterNumber = 1
-            print("You selected Dwarf")
+            print("Player \(playerId) selected Dwarf")
         case "2" : newCharacter = Giant()
                    characterNumber = 2
-            print("You selected Giant")
+            print("Player \(playerId)selected Giant")
         case "3" : newCharacter = Warrior()
                    characterNumber = 3
-            print("You selected Warrior")
+            print("Player \(playerId) selected Warrior")
         case "4" : newCharacter = Wizard()
                    characterNumber = 4
-            print("You selected Wizard")
+            print("Player \(playerId) selected Wizard")
         default: inputType = false
             print("Choice is wrong, please select a number between 1 and 4")
             
         }
     
-     }while !inputType!
+     }
+    }     while !inputType!
         
         
-        print("rename your character")
-        var inputName : Bool?
+        print("Player \(playerId) , give a name to your character :")
         
         
+//Player has to rename his selected game character
         repeat {
-        inputName = true
-        newCharacter!.name = readLine()!
-            print("Welcome on board \(String(describing: newCharacter?.name))")
-        }while !inputName!
+             inputName = true
+             newCharacter!.name = readLine()
+            
+//call of the func nameAlreadyExist to see if the name is unique
+            
+            if nameAlreadyExist( equal : newCharacter!.name!)    {
+                inputName = false
+                print("Name already exist, please right another name !")
+            }
+            
+            }while !inputName
         
         
+ //add of the new character to the array teamMembers
+     
+        newCharacter!.id = characterNumber!
         
         teamMembers.append(newCharacter!)
-        return newCharacter!
+        
+        print("\(newCharacter!.name!) joined the team")
+        
         
     }
    
 
 
-
+    
+    
+    
+    
+    
+    
+    
     func createTeam () {
-    
-        
-    
-        for inputNumber in 0...1 {
-            selectGameCharacter()
+        var inputNumber = 0
+        while inputNumber < 2 {
+            
+            inputNumber += 1
             
         }
-       
+    
+    
+    
+    
+    
         
             
         

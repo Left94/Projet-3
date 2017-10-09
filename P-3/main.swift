@@ -7,17 +7,15 @@
 //
 
 import Foundation
+var player1 = Player(playerId : 1)
+var player2 = Player(playerId: 2)
+print("Welcome Player 1!")
+player1.selectGameCharacter()
+player1.createTeam()
+print("\(player1.teamMembers)")
 
 
-
-
-
-
-
-var player = Player(playerId : 1)
-
-player.createTeam()
-player.selectGameCharacter()
-
-print("\(player.teamMembers)")
-
+print("Welcome Player 2!")
+player2.selectGameCharacter()
+player2.createTeam()
+print("\(player1.teamMembers)")
