@@ -17,15 +17,55 @@ class Player {
     
     var teamMembers : [GameCharacter] = []
     var playerId : Int
+    var numberOfPlayer = 2
+    
     
     init(playerId : Int ) {
         self.playerId = playerId
         
     }
+   
+    
+    
+    
+    
+//==================================================================
+    func initializePlayers() {
+        
+        print("Please enter your player number between 1 and 2:")
 
+        var inputNumber : Bool
+        
+        repeat {
+            
+        inputNumber = true
+        
+            
+            if let choice = readLine() {
+                
+                switch choice {
+                case "1" :
+                    playerId = 2
+                case "2" :
+                    playerId = 3
+                    
+                default : inputNumber = false
+                }
+                
+                
+                
+            }
+            
+            
+            
+        } while !inputNumber
+        
     
     
     
+    }
+    
+//===================================================================
     
     
     
@@ -49,6 +89,7 @@ class Player {
 
     func selectGameCharacter () {
     
+    print("Welcome player \(playerId)!")
     print("Please select your team's characters")
     print()
     print("Enter a number between 1 and 4:")

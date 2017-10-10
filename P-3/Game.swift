@@ -13,7 +13,7 @@ import Foundation
 
 class Game {
   
-    var player : Player
+    var player : Player 
     
     
     
