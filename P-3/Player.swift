@@ -16,14 +16,16 @@ class Player {
     
     
     var teamMembers : [GameCharacter] = []
-    var playerId : Int
+    var player : [Int] = []
+    var playerId : Int?
     var numberOfPlayer = 2
     
     
-    init(playerId : Int ) {
+    init(playerId : Int  ) {
         self.playerId = playerId
         
     }
+    
    
     
     
@@ -45,28 +47,19 @@ class Player {
                 
                 switch choice {
                 case "1" :
-                    playerId = 2
+                    playerId! = 2
                 case "2" :
-                    playerId = 3
+                    playerId! = 3
                     
                 default : inputNumber = false
                 }
                 
-                
-                
-            }
-            
-            
-            
-        } while !inputNumber
-        
-    
-    
-    
+                }
+            } while !inputNumber
+       player.append(playerId!)
+       print("\(player)")
     }
-    
 //===================================================================
-    
     
     
     
@@ -89,7 +82,7 @@ class Player {
 
     func selectGameCharacter () {
     
-    print("Welcome player \(playerId)!")
+    print("Welcome player \(playerId!)!")
     print("Please select your team's characters")
     print()
     print("Enter a number between 1 and 4:")
@@ -112,16 +105,16 @@ class Player {
         switch choice {
         case "1" : newCharacter = Dwarf()
                    characterNumber = 1
-            print("Player \(playerId) selected Dwarf")
+            print("Player \(playerId!) selected Dwarf")
         case "2" : newCharacter = Giant()
                    characterNumber = 2
-            print("Player \(playerId)selected Giant")
+            print("Player \(playerId!)selected Giant")
         case "3" : newCharacter = Warrior()
                    characterNumber = 3
-            print("Player \(playerId) selected Warrior")
+            print("Player \(playerId!) selected Warrior")
         case "4" : newCharacter = Wizard()
                    characterNumber = 4
-            print("Player \(playerId) selected Wizard")
+            print("Player \(playerId!) selected Wizard")
         default: inputType = false
             print("Choice is wrong, please select a number between 1 and 4")
             
@@ -131,7 +124,7 @@ class Player {
     }     while !inputType!
         
         
-        print("Player \(playerId) , give a name to your character :")
+        print("Player \(playerId!) , give a name to your character :")
         
         
 //Player has to rename his selected game character
@@ -179,7 +172,7 @@ class Player {
         
     func generateTheTeam() {
         print()
-        print("Here is the Player's \(playerId) team:")
+        print("Here is the Player's \(playerId!) team:")
         for renamed in teamMembers {
             print("Good luck to \(renamed.name!) who will play as a \(renamed.type!)!")
         }

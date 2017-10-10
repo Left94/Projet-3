@@ -12,14 +12,14 @@ import Foundation
 
 
 class Game {
+    
+    
+    var numberOfPlayer = 2
+    var numberOfCharacterPerPlayer = 3
+    
+    
   
-    var player : Player 
-    
-    
-    
-    init( player : Player ) {
-        
-        self.player = player
+   
     }
     
 
@@ -36,5 +36,5 @@ class Game {
     
     
     
-}
+
 

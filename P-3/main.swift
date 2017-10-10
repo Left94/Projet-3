@@ -7,7 +7,7 @@
 //
 
 import Foundation
-var player1 = Player(playerId : 1)
+var player1 = Player(playerId: 1)
 var player2 = Player(playerId: 2)
 
 
