@@ -7,17 +7,5 @@
 //
 
 import Foundation
-var player1 = Player(playerId: 1)
-var player2 = Player(playerId: 2)
 
-
-player1.initializePlayers()
-player1.createTeam()
-
-
-
-
-
-
-player1.generateTheTeam()
-
+initGame()

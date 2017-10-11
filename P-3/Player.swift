@@ -32,10 +32,10 @@ class Player {
     
     
 //==================================================================
-    func initializePlayers() {
+    public func initializePlayers() {
         
         print("Please enter your player number between 1 and 2:")
-
+        
         var inputNumber : Bool
         
         repeat {
@@ -47,9 +47,9 @@ class Player {
                 
                 switch choice {
                 case "1" :
-                    playerId! = 2
+                    playerId! = 1
                 case "2" :
-                    playerId! = 3
+                    playerId! = 2
                     
                 default : inputNumber = false
                 }
@@ -59,6 +59,7 @@ class Player {
        player.append(playerId!)
        print("\(player)")
     }
+    
 //===================================================================
     
     

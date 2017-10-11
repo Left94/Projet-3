@@ -14,27 +14,19 @@ import Foundation
 class Game {
     
     
-    var numberOfPlayer = 2
-    var numberOfCharacterPerPlayer = 3
+}
     
+var player1 = Player(playerId: 1)
+var player2 = Player(playerId: 2)
+
+func initGame() {
+    player1.initializePlayers()
+    player1.createTeam()
+    player1.generateTheTeam()
     
-  
+    player2.initializePlayers()
+    player1.createTeam()
+    player2.generateTheTeam()
+}
+    
    
-    }
-    
-
-    
-    
-    
-    
-    
-    func initGame() {
-        
-    print("Welcome to the game , please create your team")
-        
-    }
-    
-    
-    
-
-
