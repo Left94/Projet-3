@@ -14,19 +14,21 @@ import Foundation
 class Game {
     
     
-}
+
     
 var player1 = Player(playerId: 1)
 var player2 = Player(playerId: 2)
 
 func initGame() {
-    player1.initializePlayers()
-    player1.createTeam()
-    player1.generateTheTeam()
     
-    player2.initializePlayers()
     player1.createTeam()
-    player2.generateTheTeam()
+    player1.teamDisplay()
+    
+    
+    player2.createTeam()
+    player2.teamDisplay()
+    print("Team Player 1 is: \(player1.teamMembers)")
+    print("team Player 2 is: \(player2.teamMembers)")
 }
     
-   
+}

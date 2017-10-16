@@ -7,5 +7,5 @@
 //
 
 import Foundation
-
-initGame()
+var play = Game()
+play.initGame()
