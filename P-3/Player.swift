@@ -35,21 +35,26 @@ class Player {
 //===================================================================
 //Func to see if the input name of the game character already exist||
 //===================================================================
-    func nameAlreadyExist(equal name : String )-> Bool {
+    func nameAlreadyExist( equal name : String , enemyTeam :[GameCharacter])-> Bool {
         var alreadyExist = false
-            for gameCharacterExist in teamMembers {
-                if name == gameCharacterExist.name! {
+        for gameCharacterExist in enemyTeam {
+            if name == gameCharacterExist.name! {
                 alreadyExist = true
-                }
             }
-        return alreadyExist
+        }
+                for gameCharacterExist in teamMembers {
+                    if name == gameCharacterExist.name! {
+                    alreadyExist = true
+                    }
+                }
+                return alreadyExist
     }
 //===================================================================
 //func to select the game characters for the team player           ||
 //===================================================================
 
 
-    func selectGameCharacter () {
+    func selectGameCharacter (enemy : Player) {
     
         print("Welcome player \(playerId!)!")
         print("Please select your team's characters")
@@ -105,7 +110,7 @@ class Player {
             
 //call of the func nameAlreadyExist to see if the name is unique
             
-            if nameAlreadyExist( equal : newCharacter!.name!) || newCharacter!.name!.isEmpty    {
+            if nameAlreadyExist( equal : newCharacter!.name!, enemyTeam: enemy.teamMembers ) || newCharacter!.name!.isEmpty    {
                 inputName = false
                 print("Please enter a no-empty name who hasn t already used:")
             }
@@ -120,9 +125,9 @@ class Player {
         print("\(newCharacter!.name!) joined the team")
     }
    
-func createTeam () {
+    func createTeam (enemy : Player) {
         for _ in 0...2 {
-            selectGameCharacter()
+            selectGameCharacter(enemy : enemy )
         }
 }
         
@@ -130,7 +135,7 @@ func createTeam () {
         print()
         print("Here is the Player's \(playerId!) team:")
             for renamed in teamMembers {
-            print("Good luck to \(renamed.name!) who will play as a \(renamed.type!)!")
+                print("Good luck to \(renamed.name!) who will play as a \(renamed.type!)!")
             }
     }
         

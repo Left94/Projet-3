@@ -21,11 +21,11 @@ var player2 = Player(playerId: 2)
 
 func initGame() {
     
-    player1.createTeam()
+    player1.createTeam(enemy : player2)
     player1.teamDisplay()
     
     
-    player2.createTeam()
+    player2.createTeam(enemy: player1)
     player2.teamDisplay()
     print("Team Player 1 is: \(player1.teamMembers)")
     print("team Player 2 is: \(player2.teamMembers)")
