@@ -8,4 +8,5 @@
 
 import Foundation
 var play = Game()
+play.describeGame()
 play.initGame()
