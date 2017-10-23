@@ -42,7 +42,7 @@ func initGame() {
    // player2.teamDisplay()
     //Inform player 1 to do an action
     player1.playerTurnDisplay(playerId: 1)
-    player1.selectGameCharacter(player: player1)
+    
     player1.fight()
    
     

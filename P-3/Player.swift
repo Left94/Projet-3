@@ -181,22 +181,23 @@ class Player {
                     print("Choice is wrong, please select a number between 1 and 3")
                 
               }
-                if characterSelected?.type == .Wizard {
-                    let wizard = characterSelected as! Wizard
-                    print("Select a character to heal in your team")
-                    let ownCharacterSelected = selectGameCharacter(player: self)
-                    wizard.health(target: ownCharacterSelected)
-                    
-                }else{
-                 // will ask to choose a target in player' s 2 team to attack //
-                }
+                
           }
     }while !inputType!
  return characterSelected!
 }
 //================================================================
     func fight () {
-        
+        let characterSelected = selectGameCharacter(player: self)
+        if characterSelected.type == .Wizard {
+            let wizard = characterSelected as! Wizard
+            print("Select a character to heal in your team")
+            let ownCharacterSelected = selectGameCharacter(player: self)
+            wizard.health(target: ownCharacterSelected)
+            
+        }else{
+            // will ask to choose a target in player' s 2 team to attack //
+        }
         }
 
 
