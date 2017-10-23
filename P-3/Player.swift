@@ -142,9 +142,9 @@ class Player {
         print("Player \(playerId), this is your turn to play!")
     }
     
-// Method to select a game Character to do an action with it
+// Method to select a game Character from player' s list to do an action with it
     
-    func selectGameCharacter() {
+    func selectGameCharacter( player : Player)-> GameCharacter {
         
         
         let character1 = teamMembers[0]
@@ -152,11 +152,11 @@ class Player {
         let character3 = teamMembers[2]
         var characterSelected : GameCharacter?
         var inputType : Bool?
-        print("Please enter a number to select your character who will play this turn:")
+        print("Please enter a number to select a character :")
         print()
-        print("1--->\(character1.name!) who will play as a \(character1.type!)")
-        print("2--->\(character2.name!) who will play as a \(character2.type!)")
-        print("3--->\(character3.name!) who will play as a \(character3.type!)")
+        print("1--->\(character1.name!) who is playing as a \(character1.type!)")
+        print("2--->\(character2.name!) who is playing as a \(character2.type!)")
+        print("3--->\(character3.name!) who is playing as a \(character3.type!)")
         print()
         
     repeat {
@@ -180,15 +180,24 @@ class Player {
                 default : inputType = false
                     print("Choice is wrong, please select a number between 1 and 3")
                 
-            }
-        }
+              }
+                if characterSelected?.type == .Wizard {
+                    let wizard = characterSelected as! Wizard
+                    print("Select a character to heal in your team")
+                    let ownCharacterSelected = selectGameCharacter(player: self)
+                    wizard.health(target: ownCharacterSelected)
+                    
+                }else{
+                 // will ask to choose a target in player' s 2 team to attack //
+                }
+          }
     }while !inputType!
+ return characterSelected!
 }
 //================================================================
     func fight () {
         
-    }
-    
+        }
+
+
 }
-
-

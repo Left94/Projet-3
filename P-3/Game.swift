@@ -38,11 +38,13 @@ func initGame() {
     player1.createTeam(enemy : player2)
     player1.teamDisplay()
     //Player 2's turn to compose his own team
-    player2.createTeam(enemy: player1)
-    player2.teamDisplay()
+    //player2.createTeam(enemy: player1)
+   // player2.teamDisplay()
     //Inform player 1 to do an action
     player1.playerTurnDisplay(playerId: 1)
-    player1.selectGameCharacter()
+    player1.selectGameCharacter(player: player1)
+    player1.fight()
+   
     
     }
     
