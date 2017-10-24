@@ -12,28 +12,36 @@ import Foundation
 
 
 class Player {
+ // VARIABLES
     
     var teamMembers : [GameCharacter] = []
     var playerId : Int?
+    
+// INITIALIZERS
     
     init(playerId : Int  ) {
         self.playerId = playerId
     }
     
    
-    
-    
-    
-    
-//==================================================================
-    
-    
-//===================================================================
-    
-    
+// METHODS
     
 
-//Method to see if the input name of the game character already exist
+// Method to see if the team selected count gameCharacter alive
+    
+    func teamIsAlive( player : Player )-> Bool {
+        
+        var teamIsUp = false
+        
+        for _ in teamMembers {
+            teamIsUp = true
+       
+        }
+        return teamIsUp
+    }
+    
+
+// Method to see if the input name of the game character already exist
 
     func nameAlreadyExist( equal name : String , enemyTeam :[GameCharacter])-> Bool {
         var alreadyExist = false
@@ -105,7 +113,7 @@ class Player {
              inputName = true
              newCharacter!.name = readLine()
             
-// Call of the method nameAlreadyExist to see if the name is unique
+// Call of the method nameAlreadyExist() to see if the name is unique
             
             if nameAlreadyExist( equal : newCharacter!.name!, enemyTeam: enemy.teamMembers ) || newCharacter!.name!.isEmpty    {
                 inputName = false
@@ -144,7 +152,7 @@ class Player {
     
 // Method to select a game Character from player' s list to do an action with it
     
-    func selectGameCharacter( player : Player)-> GameCharacter {
+    func selectGameCharacter()-> GameCharacter {
         
         
         let character1 = teamMembers[0]
@@ -186,19 +194,37 @@ class Player {
     }while !inputType!
  return characterSelected!
 }
-//================================================================
-    func fight () {
-        let characterSelected = selectGameCharacter(player: self)
-        if characterSelected.type == .Wizard {
-            let wizard = characterSelected as! Wizard
-            print("Select a character to heal in your team")
-            let ownCharacterSelected = selectGameCharacter(player: self)
-            wizard.health(target: ownCharacterSelected)
+// Method to engage the fight
+    
+    func fight (enemy : Player) {
+        
+        // Call of the method teamIsAlive() to be sure that we have gameCharacters alive to be selected
+        if teamIsAlive(player: self) == true {
+        
+            // Ask to the player who is playing to select one of his own characters to do an action
+            let characterSelected = selectGameCharacter()
+            // if the character selected is wizard we ask to select a game character to heal
             
-        }else{
-            // will ask to choose a target in player' s 2 team to attack //
+                if characterSelected.type == .Wizard {
+                    let wizard = characterSelected as! Wizard
+                    print("Select a character to heal in your team")
+                    let ownCharacterSelected = selectGameCharacter()
+                    wizard.health(target: ownCharacterSelected)
+        
+                // else if the character selected is another one else exept wizard then ....
+                }else if characterSelected.type == .Warrior || characterSelected.type == .Dwarf || characterSelected.type == .Giant {
+                    // ...we ask to choose a target in player' s 2 team to attack
+                    print("Select a character to attack in the opponent team")
+                    if teamIsAlive(player: enemy) == true {
+                        let characterToAttack = enemy.selectGameCharacter()
+                
+                        // we call the attack method to hit the selected character in the opponent' s team
+                        characterSelected.attack(target: characterToAttack)
+                    }
+            
+               }
         }
-        }
-
-
+    
+    }
+    
 }
