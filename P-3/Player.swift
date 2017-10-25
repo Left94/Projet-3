@@ -27,7 +27,7 @@ class Player {
 // METHODS
     
 
-// Method to see if the team selected count gameCharacter alive
+// Method to check if the team still has life characters
     
     func teamIsAlive( player : Player )-> Bool {
         
@@ -35,7 +35,6 @@ class Player {
         
         for _ in teamMembers {
             teamIsUp = true
-       
         }
         return teamIsUp
     }
@@ -198,10 +197,10 @@ class Player {
     
     func fight (enemy : Player) {
         
-        // Call of the method teamIsAlive() to be sure that we have gameCharacters alive to be selected
+        // Call of the method teamIsAlive() to be sure that we still have gameCharacters alive to be selected
         if teamIsAlive(player: self) == true {
         
-            // Ask to the player who is playing to select one of his own characters to do an action
+            // Ask the player to select one of his own characters to do an action
             let characterSelected = selectGameCharacter()
             // if the character selected is wizard we ask to select a game character to heal
             
@@ -213,8 +212,9 @@ class Player {
         
                 // else if the character selected is another one else exept wizard then ....
                 }else if characterSelected.type == .Warrior || characterSelected.type == .Dwarf || characterSelected.type == .Giant {
-                    // ...we ask to choose a target in player' s 2 team to attack
+                    // ...we ask player to choose a target in player' s 2 team to attack
                     print("Select a character to attack in the opponent team")
+                    // we call tealIsAlive method to see if there is at least on character alive in the opponent's team
                     if teamIsAlive(player: enemy) == true {
                         let characterToAttack = enemy.selectGameCharacter()
                 
