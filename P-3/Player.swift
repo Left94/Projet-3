@@ -157,7 +157,7 @@ class Player {
     repeat {
         inputType = true
             if let choice = Int(readLine()!)  {
-                // Array indexes begin at 0 not at 1
+                // Array indexes begin at 0 
                 let index = choice - 1
                 if teamMembers.indices.contains(index){
                     characterSelected = teamMembers[index]
