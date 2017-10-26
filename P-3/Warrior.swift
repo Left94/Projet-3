@@ -17,7 +17,7 @@ class Warrior : GameCharacter {
         super.init()
         id = 3
         type = GameCharacterRace.Warrior  //character' s race
-        healthPoints = 90                 //life point
+        healthPoints = 0                 //life point
         stayingHealth = healthPoints      //life point staying
         
     }

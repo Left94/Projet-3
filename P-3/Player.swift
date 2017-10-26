@@ -12,23 +12,19 @@ import Foundation
 
 
 class Player {
- // VARIABLES
     
+    // VARIABLES
     var teamMembers : [GameCharacter] = []
     var playerId : Int?
     
-// INITIALIZERS
-    
+    // INITIALIZERS
     init(playerId : Int  ) {
         self.playerId = playerId
     }
     
    
-// METHODS
-    
-
-// Method to check if the team still has life characters
-    
+    // METHODS
+    // Method to check if the team still has life characters
     func teamIsAlive( player : Player )-> Bool {
         
         var teamIsUp = false
@@ -40,8 +36,7 @@ class Player {
     }
     
 
-// Method to see if the input name of the game character already exist
-
+    // Method to see if the input name of the game character already exist
     func nameAlreadyExist( equal name : String , enemyTeam :[GameCharacter])-> Bool {
         var alreadyExist = false
         for gameCharacterExist in enemyTeam {
@@ -57,8 +52,7 @@ class Player {
                 return alreadyExist
     }
 
-// Method to select the game characters for the team player
-
+    // Method to select the game characters for the team player
     func chooseGameCharacter (enemy : Player) {
         print()
         print("Player \(playerId!), please select your team's character")
@@ -76,26 +70,22 @@ class Player {
         var inputName : Bool
         
         
-// Player has to selected his member' s team
+        // Player has to selected his member' s team
         repeat {
             inputType = true
             if let choice = readLine(){
                 switch choice {
                     case "1" :
                         newCharacter = Dwarf()
-                        
                         print("Player \(playerId!) selected Dwarf")
                     case "2" :
                         newCharacter = Giant()
-                        
                         print("Player \(playerId!) selected Giant")
                     case "3" :
                         newCharacter = Warrior()
-                        
                         print("Player \(playerId!) selected Warrior")
                     case "4" :
                         newCharacter = Wizard()
-                        
                         print("Player \(playerId!) selected Wizard")
                     default:
                         inputType = false
@@ -107,13 +97,12 @@ class Player {
             print("Player \(playerId!) , give a name to your character :")
         
         
-// Player has to rename his selected game character
+        // Player has to rename his selected game character
         repeat {
              inputName = true
              newCharacter!.name = readLine()
             
-// Call of the method nameAlreadyExist() to see if the name is unique
-            
+            // Call of the method nameAlreadyExist() to see if the name is unique
             if nameAlreadyExist( equal : newCharacter!.name!, enemyTeam: enemy.teamMembers ) || newCharacter!.name!.isEmpty    {
                 inputName = false
                 print("Please enter a no-empty name who hasn t already used:")
@@ -122,79 +111,71 @@ class Player {
         }while !inputName
         
         
-// Add the new character to the array teamMembers
-     
+        // Add the new character to the array teamMembers
         teamMembers.append(newCharacter!)
-        
+        print()
         print("\(newCharacter!.name!) the \(newCharacter!.type!) joined the team")
     }
-// Method to repeat and add new game character in the team members list 3 times
-    
+    // Method to repeat and add new game character in the team members list 3 times
     func createTeam (enemy : Player) {
+        
+        
         for _ in 0...2 {
             chooseGameCharacter(enemy : enemy )
         }
 }
-// Method to list all the renamed game characters with their own type (dwarf, giant, wizard, warrior) in the created team to inform the player
+    
+    // Method to list all the renamed game characters with their own type (dwarf, giant, wizard, warrior) in the created team to inform the player
     func teamDisplay() {
+        
+        
         print("Player \(playerId!), this is your team:")
         for renamed in teamMembers {
                 print("\(renamed.name!) play as a \(renamed.type!)!")
         }
     }
- // Method to inform the player' s turn to play
     
+    // Method to inform the player' s turn to play
     func playerTurnDisplay(playerId : Int) {
         print()
         print("Player \(playerId), this is your turn to play!")
     }
     
-// Method to select a game Character from player' s list to do an action with it
-    
+    // Method to select a game Character from player' s list to do an action with it
     func selectGameCharacter()-> GameCharacter {
         
         
-        let character1 = teamMembers[0]
-        let character2 = teamMembers[1]
-        let character3 = teamMembers[2]
+        
         var characterSelected : GameCharacter?
         var inputType : Bool?
+        
         print("Please enter a number to select a character :")
         print()
-        print("1--->\(character1.name!) who is playing as a \(character1.type!)")
-        print("2--->\(character2.name!) who is playing as a \(character2.type!)")
-        print("3--->\(character3.name!) who is playing as a \(character3.type!)")
-        print()
+        // we only show the game characters till in game with a dynamic loop
+        for (index, element) in teamMembers.enumerated() {
+            print(index + 1, ":", element.name!,"who is playing as", element.type!)
+        }
         
-    repeat {
+        repeat {
         inputType = true
-            if let choice = readLine() {
-                switch choice {
-                    case "1" :
-                        characterSelected = character1
-                        print("You selected \(character1.name!) as \(character1.type!) !")
-            
-                    case "2" :
-                
-                        characterSelected = character2
-                        print("You selected \(character2.name!) as \(character2.type!) !")
-            
-                    case "3" :
-                
-                        characterSelected = character3
-                        print("You selected \(character3.name!) as \(character3.type!) !")
-                
-                default : inputType = false
-                    print("Choice is wrong, please select a number between 1 and 3")
-                
-              }
-                
-          }
-    }while !inputType!
- return characterSelected!
-}
-// Method to engage the fight
+            if let choice = Int(readLine()!)  {
+            // Array indexes begin at 0
+                let index = choice - 1
+                    if teamMembers.indices.contains(index){
+                        characterSelected = teamMembers[index]
+                        // we create an unique Id per game character equal to the index
+                        characterSelected!.id = index
+                        print("You selected \(teamMembers[index].name!) who is playing as a \(teamMembers[index].type!)")                    }else{
+                        print("Select an available character")
+                        inputType = false
+                    }
+            }
+        }while !inputType!
+        return characterSelected!
+   }
     
+
+    // Method to engage the fight
     func fight (enemy : Player) {
         
         // Call of the method teamIsAlive() to be sure that we still have gameCharacters alive to be selected
@@ -202,8 +183,8 @@ class Player {
         
             // Ask the player to select one of his own characters to do an action
             let characterSelected = selectGameCharacter()
-            // if the character selected is wizard we ask to select a game character to heal
             
+                // if the character selected is wizard we ask to select a game character to heal
                 if characterSelected.type == .Wizard {
                     let wizard = characterSelected as! Wizard
                     print("Select a character to heal in your team")
@@ -211,15 +192,26 @@ class Player {
                     wizard.health(target: ownCharacterSelected)
         
                 // else if the character selected is another one else exept wizard then ....
-                }else if characterSelected.type == .Warrior || characterSelected.type == .Dwarf || characterSelected.type == .Giant {
+                }else{
                     // ...we ask player to choose a target in player' s 2 team to attack
                     print("Select a character to attack in the opponent team")
-                    // we call tealIsAlive method to see if there is at least on character alive in the opponent's team
+                    
+                    // we call tealIsAlive method to see if there is at least one character alive in the opponent's team
                     if teamIsAlive(player: enemy) == true {
                         let characterToAttack = enemy.selectGameCharacter()
                 
                         // we call the attack method to hit the selected character in the opponent' s team
                         characterSelected.attack(target: characterToAttack)
+                        if characterToAttack.stayingHealth! == 0 || characterToAttack.stayingHealth! < 0{
+                            print()
+                            // we use the unique game character Id who is an int equal to his own index
+                            let characterToRemove = characterToAttack.id
+                            enemy.teamMembers.remove(at: characterToRemove!)
+                            
+                            
+                            
+                           
+                        }
                     }
             
                }

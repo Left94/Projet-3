@@ -39,7 +39,7 @@ class GameCharacter  {
     
     
     func attack(target : GameCharacter) {      //game character selected received damage from weapon
-        print("\(self.name!) decide to attack \(target.name!) ")
+        print("\(self.name!) decided to attack \(target.name!) ")
         target.takeDamage(damage: (self.hitPoints))
         
     }
@@ -49,7 +49,8 @@ class GameCharacter  {
         print("\(self.name!) has been hit and received \(damage)")
         stayingHealth! -= damage
         if stayingHealth! <= 0 {
-            print("\(self.name!)has been killed !")
+            print("\(self.name!) has been killed !")
+            
         }
     }
     
