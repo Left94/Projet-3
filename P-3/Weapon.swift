@@ -21,8 +21,10 @@ class Weapon {
     
     }
     
-    var damagePoints : Int?     //weapon' s stat
+    var damagePoints : Int?  //weapon' s stat
     var healingPoints : Int?
     var type : WeaponType?
+    
+    
 }
 

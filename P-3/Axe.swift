@@ -13,15 +13,14 @@ import Foundation
 
 class Axe : Weapon {
     
-    override init () {
+    init(damagePoints : Int = 70 ) {
         super.init()
-        
-        
-        damagePoints = 70
-        type = WeaponType.DamagingWeapon
+        type = .DamagingWeapon
         
         
     }
     
-    
 }
+    
+    
+

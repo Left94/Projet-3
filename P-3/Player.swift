@@ -179,10 +179,17 @@ class Player {
     func fight (enemy : Player) {
         
         // Call of the method teamIsAlive() to be sure that we still have gameCharacters alive to be selected
-        if teamIsAlive(player: self) == true {
+        if teamIsAlive(player: self)  {
         
             // Ask the player to select one of his own characters to do an action
             let characterSelected = selectGameCharacter()
+            let randomNumber = arc4random_uniform(100)
+            
+                // we want 20 % chance to popup a chest with a new weapon inside
+                // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
+                if randomNumber < 20 {
+                    characterSelected.openChest()
+                }
             
                 // if the character selected is wizard we ask to select a game character to heal
                 if characterSelected.type == .Wizard {
@@ -197,14 +204,14 @@ class Player {
                     print("Select a character to attack in the opponent team")
                     
                     // we call tealIsAlive method to see if there is at least one character alive in the opponent's team
-                    if teamIsAlive(player: enemy) == true {
+                    if teamIsAlive(player: enemy)  {
                         let characterToAttack = enemy.selectGameCharacter()
                 
                         // we call the attack method to hit the selected character in the opponent' s team
                         characterSelected.attack(target: characterToAttack)
                         if characterToAttack.stayingHealth! == 0 || characterToAttack.stayingHealth! < 0{
                             print()
-                            // we use the unique game character Id who is an int equal to his own index
+                            // we use the unique game character's Id which is an int equal to his own index
                             let characterToRemove = characterToAttack.id
                             enemy.teamMembers.remove(at: characterToRemove!)
                             

@@ -13,15 +13,15 @@ import Foundation
 
 class Hammer : Weapon {
     
-    override init () {
+    init(damagePoints : Int = 40 ) {
         super.init()
-        
-        
-        damagePoints = 40
-        type = WeaponType.DamagingWeapon
+        type = .DamagingWeapon
         
         
     }
     
-    
+        
 }
+    
+    
+

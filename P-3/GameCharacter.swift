@@ -28,10 +28,17 @@ class GameCharacter  {
     var healthPoints: Int?          //life points of the game character at the start of the battle
     var stayingHealth: Int?         //life points during the battle
     var weapon: Weapon?
-    var hitPoints: Int {            // hit points from the damage points of the weapon
-        if let used = weapon {
+    var hitPoints : Int {            // return hit points from the damage points of the weapon
+        if let used = weapon{
             return used.damagePoints!
-        } else {
+        }else{
+        return 0
+        }
+    }
+    var hpPoints: Int {            // return hp points from the damage points of the weapon
+        if let used = weapon {
+            return used.healingPoints!
+        }else{
         return 0
         }
     }
@@ -40,31 +47,55 @@ class GameCharacter  {
     
     func attack(target : GameCharacter) {      //game character selected received damage from weapon
         print("\(self.name!) decided to attack \(target.name!) ")
-        target.takeDamage(damage: (self.hitPoints))
+        target.takeDamage(damage: self.hitPoints)
         
     }
     
     
-    func takeDamage(damage : Int) {       //game character's life decrease of weapon's damages pts
-        print("\(self.name!) has been hit and received \(damage)")
+    func takeDamage(damage : Int ) {       //game character's life decrease of weapon's damages pts
+        print("\(self.name!) has been hit and lost \(damage) HP")
         stayingHealth! -= damage
+        print("\(self.name!) has \(stayingHealth!) HP")
         if stayingHealth! <= 0 {
             print("\(self.name!) has been killed !")
             
         }
     }
     
-    
-    
-    func recoverHP (hp : Int) {            //game character's life increase of weapon's healing pts
+    func health (target : GameCharacter) { //game character selected received healing pts from weapon
+        target.recoverHP(hp: self.hpPoints )
+        
+    }
+    func recoverHP ( hp : Int  ) {            //game character's life increase of weapon's healing pts
         print("\(self.name!) has been health and recover \(hp)")
         stayingHealth! += hp
-        
+        print("\(stayingHealth!)")
     }
     
     
     
     
+    func openChest () { // Method to popup a chest with a new weapon inside
+        print("A Chest appeared, \(self.name!) decided to open it ")
+        print()
+        let weaponInsideChest : Weapon
+        
+            switch self.type! {
+                case .Warrior :
+                    weaponInsideChest = Sword (damagePoints : 60)
+                    print("\(self.name!) found a new Sword with a 10 bonus points attack!" )
+                case .Dwarf :
+                    weaponInsideChest = Axe (damagePoints : 80)
+                    print("\(self.name!) found a new Axe with a 10 bonus points attack!" )
+                case .Giant :
+                    weaponInsideChest = Hammer (damagePoints : 50)
+                    print("\(self.name!) found a new Hammer with a 10 bonus points attack!" )
+                case .Wizard :
+                    weaponInsideChest = Stick (healingPoints : 50)
+                    print("\(self.name!) found a new Stick with a 10 bonus points healing!" )
+            }
+        self.weapon = weaponInsideChest
+    }
         
     
     
