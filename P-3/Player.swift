@@ -40,12 +40,12 @@ class Player {
     func nameAlreadyExist( equal name : String , enemyTeam :[GameCharacter])-> Bool {
         var alreadyExist = false
         for gameCharacterExist in enemyTeam {
-            if name == gameCharacterExist.name! {
+            if name == gameCharacterExist.name {
                 alreadyExist = true
             }
         }
                 for gameCharacterExist in teamMembers {
-                    if name == gameCharacterExist.name! {
+                    if name == gameCharacterExist.name {
                     alreadyExist = true
                     }
                 }
@@ -65,7 +65,7 @@ class Player {
         print("4------>Wizard------->Just a Healer-------->Weapon: Stick, RecoverSkill: 40->Health: 70pts" )
     
      
-        var newCharacter : GameCharacter?
+        var newCharacter = GameCharacter()
         var inputType : Bool?
         var inputName : Bool
         
@@ -100,10 +100,10 @@ class Player {
         // Player has to rename his selected game character
         repeat {
              inputName = true
-             newCharacter!.name = readLine()
+             newCharacter.name = readLine()!
             
             // Call of the method nameAlreadyExist() to see if the name is unique
-            if nameAlreadyExist( equal : newCharacter!.name!, enemyTeam: enemy.teamMembers ) || newCharacter!.name!.isEmpty    {
+            if nameAlreadyExist( equal : newCharacter.name, enemyTeam: enemy.teamMembers ) || newCharacter.name.isEmpty    {
                 inputName = false
                 print("Please enter a no-empty name who hasn t already used:")
             }
@@ -112,9 +112,9 @@ class Player {
         
         
         // Add the new character to the array teamMembers
-        teamMembers.append(newCharacter!)
+        teamMembers.append(newCharacter)
         print()
-        print("\(newCharacter!.name!) the \(newCharacter!.type!) joined the team")
+        print("\(newCharacter.name)  joined the team")
     }
     // Method to repeat and add new game character in the team members list 3 times
     func createTeam (enemy : Player) {
@@ -131,7 +131,7 @@ class Player {
         
         print("Player \(playerId!), this is your team:")
         for renamed in teamMembers {
-                print("\(renamed.name!) play as a \(renamed.type!)!")
+                print("\(renamed.name) play !")
         }
     }
     
@@ -153,7 +153,7 @@ class Player {
         print()
         // we only show the game characters till in game with a dynamic loop
         for (index, element) in teamMembers.enumerated() {
-            print(index + 1, ":", element.name!,"who is playing as", element.type!)
+            print(index + 1, ":", element.name,"who is playing ")
         }
         
         repeat {
@@ -165,7 +165,7 @@ class Player {
                         characterSelected = teamMembers[index]
                         // we create an unique Id per game character equal to the index
                         characterSelected!.id = index
-                        print("You selected \(teamMembers[index].name!) who is playing as a \(teamMembers[index].type!)")                    }else{
+                        print("You selected \(teamMembers[index].name) who is playing ")                    }else{
                         print("Select an available character")
                         inputType = false
                     }
@@ -188,15 +188,15 @@ class Player {
                 // we want 20 % chance to popup a chest with a new weapon inside
                 // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
                 if randomNumber < 20 {
-                    characterSelected.openChest()
+                 //   characterSelected.openChest()
                 }
             
                 // if the character selected is wizard we ask to select a game character to heal
-                if characterSelected.type == .Wizard {
-                    let wizard = characterSelected as! Wizard
+            if let wizard = characterSelected as? Wizard{
+        
                     print("Select a character to heal in your team")
                     let ownCharacterSelected = selectGameCharacter()
-                    wizard.health(target: ownCharacterSelected)
+                    wizard.heal(target: ownCharacterSelected)
         
                 // else if the character selected is another one else exept wizard then ....
                 }else{
@@ -209,11 +209,11 @@ class Player {
                 
                         // we call the attack method to hit the selected character in the opponent' s team
                         characterSelected.attack(target: characterToAttack)
-                        if characterToAttack.stayingHealth! == 0 || characterToAttack.stayingHealth! < 0{
+                        if characterToAttack.healthPoints == 0 || characterToAttack.healthPoints < 0{
                             print()
                             // we use the unique game character's Id which is an int equal to his own index
                             let characterToRemove = characterToAttack.id
-                            enemy.teamMembers.remove(at: characterToRemove!)
+                            enemy.teamMembers.remove(at: characterToRemove)
                             
                             
                             

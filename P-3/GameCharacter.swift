@@ -12,7 +12,7 @@ import Foundation
 
 
 
-class GameCharacter  {
+class GameCharacterOld  {
    
     enum GameCharacterRace  {
         
@@ -25,7 +25,7 @@ class GameCharacter  {
     var name: String?               //name of the game character rename from the player
     var id: Int?                    //id of the game character to select for create team
     var type: GameCharacterRace?    //type of the game character from the race enum
-    var healthPoints: Int?          //life points of the game character at the start of the battle
+    var healthPoints: Int?          // Max life points
     var stayingHealth: Int?         //life points during the battle
     var weapon: Weapon?
     var hitPoints : Int {            // return hit points from the damage points of the weapon
@@ -46,28 +46,17 @@ class GameCharacter  {
     
     
     func attack(target : GameCharacter) {      //game character selected received damage from weapon
-        print("\(self.name!) decided to attack \(target.name!) ")
-        target.takeDamage(damage: self.hitPoints)
+        print("\(self.name) decided to attack \(target.name) ")
         
-    }
-    
-    
-    func takeDamage(damage : Int ) {       //game character's life decrease of weapon's damages pts
-        print("\(self.name!) has been hit and lost \(damage) HP")
-        stayingHealth! -= damage
-        print("\(self.name!) has \(stayingHealth!) HP")
-        if stayingHealth! <= 0 {
-            print("\(self.name!) has been killed !")
-            
-        }
+        target.healthPoints -= self.hitPoints
     }
     
     func health (target : GameCharacter) { //game character selected received healing pts from weapon
-        target.recoverHP(hp: self.hpPoints )
-        
+        print("\(target.name) has been health and recover \(self.hpPoints)")
+        target.healthPoints += self.hpPoints
     }
     func recoverHP ( hp : Int  ) {            //game character's life increase of weapon's healing pts
-        print("\(self.name!) has been health and recover \(hp)")
+       
         stayingHealth! += hp
         print("\(stayingHealth!)")
     }
