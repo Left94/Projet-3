@@ -21,25 +21,22 @@ class GameCharacter  {
     var maxHP: Int                  // Max life points
     var healthPoints: Int           //life points during the battle
     var weapon: Weapon?
-    var hitPoints : Int {           // return hit points from the damage points of the weapon
-        if let used = weapon{
-            return used.damagePoints!
-        }else{
-            return 0
-        }
-    }
+    var hitPoints : Int
+    var hpPoints : Int
     init(){
        
         name = ""
         id = 0
         maxHP = 100
         healthPoints = 100
-      
+        hitPoints = 100
+        hpPoints = 100
         
     }
     func attack(target : GameCharacter) {      //game character selected received damage from weapon
         print("\(self.name) decided to Attack \(target.name) ")
         target.healthPoints -= self.hitPoints
+        
         print("\(target.name) has now \(target.healthPoints) HP")
         
     }

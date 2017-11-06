@@ -16,6 +16,7 @@ class Warrior : GameCharacter {
     override init () {
         super.init()
         id = 3
-        healthPoints = 100                 //life point
+        healthPoints = 100    //life point
+        hitPoints = 50
     }
 }

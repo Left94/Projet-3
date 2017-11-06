@@ -17,5 +17,6 @@ class Dwarf : GameCharacter {
         super.init()
         id = 1
         healthPoints = 50                 //life points
+        hitPoints = 70
     }
 }

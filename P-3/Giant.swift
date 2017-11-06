@@ -16,6 +16,7 @@ class Giant : GameCharacter {
     override init () {
         super.init()
         id = 2
-        healthPoints = 130              //life point
+        healthPoints = 130    //life point
+        hitPoints = 40
     }
 }

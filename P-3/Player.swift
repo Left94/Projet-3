@@ -164,17 +164,17 @@ class Player {
             inputType = true
             if let choice = Int(readLine()!)  {
                 // Array indexes begin at 0
-                 let index = choice - 1
-                 if teamMembers.indices.contains(index){
+                let index = choice - 1
+                if teamMembers.indices.contains(index){
                     characterSelected = teamMembers[index]
                     // we create an unique Id per game character equal to the index
                     characterSelected!.id = index
-                    print("You selected \(teamMembers[index].name) who is playing ")
+                    print("You selected \(teamMembers[index].name) ! ")
                     
-                 }
+                }
             }else{
-                        inputType = false
-                        print("Select an available character")
+                inputType = false
+                print("Select an available character")
             }
             
             
@@ -182,6 +182,9 @@ class Player {
         } while !inputType!
         return characterSelected!
     }
+        
+        
+        
     
     
     // Method to engage the fight
@@ -236,3 +239,4 @@ class Player {
     }
     
 }
+

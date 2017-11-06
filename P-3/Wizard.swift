@@ -13,19 +13,15 @@ import Foundation
 
 class Wizard : GameCharacter {
     
-    var hpPoints: Int {            // return hp points from the damage points of the weapon
-        if let used = weapon {
-            return used.healingPoints!
-        }else{
-            return 0
-        }
-    }
+   
     
-    override init () {
+    override init () {//LA SOLUTION EST ICI
         super.init()
         id = 4
-        healthPoints = 70                   //life points
-        healthPoints = healthPoints        //life points staying
+        healthPoints = 70     //life points
+        hpPoints = 40
+        
+        
         
     }
     
@@ -35,8 +31,8 @@ class Wizard : GameCharacter {
     
     func heal(target : GameCharacter) {      //game character selected received health from weapon
         print("\(self.name) decided to Heal \(target.name) ")
-        
-        target.healthPoints -= self.hitPoints
-    }
+        target.healthPoints += self.hpPoints
+        print("\(target.name) recovered \(self.hpPoints) HP")
+        print("\(target.name) has now \(target.healthPoints) HP")    }
     
 }
