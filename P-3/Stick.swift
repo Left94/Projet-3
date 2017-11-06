@@ -13,12 +13,16 @@ import Foundation
 
 class Stick: Weapon {
     
-    init(healingPoints : Int = 40 ) {
+    override init() {
+        
         super.init()
+        healingPoints = 20
         type = .HealingWeapon
         
         
     }
-    
-    
+        
 }
+    
+    
+

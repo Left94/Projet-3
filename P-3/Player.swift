@@ -164,19 +164,22 @@ class Player {
             inputType = true
             if let choice = Int(readLine()!)  {
                 // Array indexes begin at 0
-                let index = choice - 1
-                if teamMembers.indices.contains(index){
+                 let index = choice - 1
+                 if teamMembers.indices.contains(index){
                     characterSelected = teamMembers[index]
                     // we create an unique Id per game character equal to the index
                     characterSelected!.id = index
                     print("You selected \(teamMembers[index].name) who is playing ")
                     
-                }else{
-                    print("Select an available character")
-                    inputType = false
-                }
+                 }
+            }else{
+                        inputType = false
+                        print("Select an available character")
             }
-        }while !inputType!
+            
+            
+            
+        } while !inputType!
         return characterSelected!
     }
     
@@ -194,7 +197,7 @@ class Player {
             // we want 20 % chance to popup a chest with a new weapon inside
             // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
             if randomNumber < 99 {
-                characterSelected.openChest()
+                //characterSelected.openChest()
             }
             
             // if the character selected is wizard we ask to select a game character to heal
