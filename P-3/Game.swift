@@ -23,12 +23,12 @@ var player2 = Player(playerId: 2)
     
 // func to describe the game to the player
 func describeGame() {
-    print("How the Game works")
+    print(" ⚠️ How the Game works ⚠️ ")
     print()
     print("This game is composed of two players, each player have to compose his own team by selected 3 game characters in a list of 4 characters")
     print("The first one who kill all the others player' s team win the game.")
     print()
-    print("One rule : kill em all !!")
+    print("One rule : kill em all !! ☠️ ")
     print()
     }
     
@@ -42,14 +42,25 @@ func initGame() {
     player2.createTeam(enemy: player1)
     player2.teamDisplay()
     
-    //inform player 1 to do an action
-    player1.playerTurnDisplay(playerId: 1)
-    player1.fight(enemy: player2)
     
-    //Inform player 2 to do an action
-    player2.playerTurnDisplay(playerId: 2)
-    player2.fight(enemy: player1)
-    
+    while player1.playerAlive == true && player2.playerAlive == true{
+        
+        //inform player 1 to do an action
+        if player2.playerAlive == true{
+        player1.playerTurnDisplay(playerId: 1)
+        player1.fight(enemy: player2)
+        
+        }else {
+            break
+        }
+        if player1.playerAlive == true {
+        //Inform player 2 to do an action
+        player2.playerTurnDisplay(playerId: 2)
+        player2.fight(enemy: player1)
+        
+        }else {
+            break
+        }
     }
-    
+  }
 }

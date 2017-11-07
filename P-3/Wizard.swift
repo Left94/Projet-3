@@ -15,7 +15,7 @@ class Wizard : GameCharacter {
     
    
     
-    override init () {//LA SOLUTION EST ICI
+    override init () {
         super.init()
         id = 4
         healthPoints = 70     //life points

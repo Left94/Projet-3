@@ -34,36 +34,49 @@ class GameCharacter  {
         
     }
     func attack(target : GameCharacter) {      //game character selected received damage from weapon
-        print("\(self.name) decided to Attack \(target.name) ")
+        print("\(self.name) decided to Attack \(target.name) ! ⚔️")
         target.healthPoints -= self.hitPoints
-        
-        print("\(target.name) has now \(target.healthPoints) HP")
-        
+        print("\(target.name) has been hit and lost \(self.hitPoints) HP ! 💔")
+        if target.healthPoints <= 0 {
+            target.healthPoints = 0
+            print("\(target.name) lost all his life and die! 💀")
+        }else{
+            print("\(target.name) has now \(target.healthPoints) HP... ❣️")
+            
+        }
     }
     
-  /* func openChest () { // Method to popup a chest with a new weapon inside
-     print("A Chest appeared, \(self.name) decided to open it ")
+   func openChest () { // Method to popup a chest with a new weapon inside
+     print("A Chest appeared 🔒 ! \(self.name) decided to open it 🔓 ! ")
      print()
      var weaponInsideChest : Weapon?
         
          switch self {
              case is Warrior :
-                weaponInsideChest = Sword (damagePoints : 60)
-                print("\(self.name) found a new Sword with a 10 bonus points attack!" )
+                weaponInsideChest = Sword ()
+                hitPoints = 60
+                print("\(self.name) found a new Sword with a 10 bonus points attack! 💪 " )
+                print("\(self.name) can now attack with \(hitPoints) of power ! ✨⚔️✨ ")
              case is Dwarf :
-                weaponInsideChest = Axe (damagePoints : 80)
-                print("\(self.name) found a new Axe with a 10 bonus points attack!" )
+                weaponInsideChest = Axe ()
+                hitPoints = 80
+                print("\(self.name) found a new Axe with a 10 bonus points attack! 💪" )
+                print("\(self.name) can now attack with \(hitPoints) of power ! ✨⚔️✨ ")
              case is Giant :
-                weaponInsideChest = Hammer (damagePoints : 50)
-                print("\(self.name) found a new Hammer with a 10 bonus points attack!" )
+                weaponInsideChest = Hammer ()
+                hitPoints = 50
+                print("\(self.name) found a new Hammer with a 10 bonus points attack! 💪" )
+                print("\(self.name) can now attack with \(hitPoints) of power ! ✨⚔️✨ ")
              case is Wizard :
-                weaponInsideChest = Stick (healingPoints : 50)
-                print("\(self.name) found a new Stick with a 10 bonus points healing!" )
+                weaponInsideChest = Stick ()
+                hpPoints = 50
+                print("\(self.name) found a new Stick with a 10 bonus points healing! 💪" )
+                print("\(self.name) can now heal with \(hpPoints) of heal points ! ✨💉✨ ")
              default:
                 print("The chest was empty")
        }
         self.weapon = weaponInsideChest
-   }*/
+   }
     
     
     
