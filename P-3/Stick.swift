@@ -13,6 +13,8 @@ import Foundation
 
 class Stick: Weapon {
     
+    var name = "Stick"
+    
     override init() {
         
         super.init()

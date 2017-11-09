@@ -155,7 +155,7 @@ class Player {
         
         
         var characterSelected : GameCharacter?
-        var inputType : Bool?
+        var inputType : Bool
         
         print("Please enter a number to select a character 1️⃣ 2️⃣ 3️⃣.....: 💬")
         print()
@@ -177,26 +177,28 @@ class Player {
                     inputType = true
                     if characterSelected is Wizard{
                         print("You selected \(teamMembers[index].name) ! ✅ ")
-                        print("\(teamMembers[index].name) can heal with  \(teamMembers[index].hpPoints) heal points 💉")
+                        print("\(teamMembers[index].name) can heal with  \(teamMembers[index].weapon!.healingPoints) heal points 💉")
                         print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
                         
                     }else{
                     print("You selected \(teamMembers[index].name) ! ✅ ")
-                    print("\(teamMembers[index].name) can attack with \(teamMembers[index].hitPoints) pts of power ⚔️")
+                    print("\(teamMembers[index].name) can attack with \(teamMembers[index].weapon!.damagePoints) pts of power ⚔️")
                     print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
                     }
-                
-                }
-                
+                    
                 }else{
                     inputType = false
                     print(" Select an available character ❌ ")
                 
                 }
+            }else{
+                inputType = false
+                print(" Select an available character ❌ ")
+            }
             
             
             
-        } while !inputType!
+        } while !inputType
         return characterSelected!
     }
     
@@ -216,7 +218,7 @@ class Player {
             
             // we want 33 % chance to popup a chest with a new weapon inside
             // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
-            if randomNumber < 33 {
+            if randomNumber < 99 {
                 characterSelected.openChest()
             }
             

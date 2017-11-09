@@ -13,6 +13,7 @@ import Foundation
 
 class Sword : Weapon {
     
+    var name = "Sword"
         
     override init() {
             super.init()

@@ -13,6 +13,8 @@ import Foundation
 
 class Hammer : Weapon {
     
+    var name = "Hammer"
+    
     override init() {
         super.init()
         damagePoints = 40

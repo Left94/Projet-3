@@ -13,10 +13,11 @@ import Foundation
 
 class Dwarf : GameCharacter {
     
-    override init () {
+    override init() {
         super.init()
+        weapon = Axe()
         id = 1
         healthPoints = 50                 //life points
-        hitPoints = 70
+        
     }
 }

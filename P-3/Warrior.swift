@@ -13,10 +13,11 @@ import Foundation
 
 class Warrior : GameCharacter {
     
-    override init () {
+    override init() {
         super.init()
+        weapon = Sword()
         id = 3
         healthPoints = 100    //life point
-        hitPoints = 50
+        
     }
 }

@@ -13,6 +13,8 @@ import Foundation
 
 class Axe : Weapon {
     
+    var name = "Axe"
+    
     override init() {
         super.init()
         damagePoints = 70

@@ -13,10 +13,11 @@ import Foundation
 
 class Giant : GameCharacter {
     
-    override init () {
+    override init() {
         super.init()
+        weapon = Hammer()
         id = 2
         healthPoints = 130    //life point
-        hitPoints = 40
+        
     }
 }

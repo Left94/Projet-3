@@ -17,9 +17,10 @@ class Wizard : GameCharacter {
     
     override init () {
         super.init()
+        weapon = Stick()
         id = 4
         healthPoints = 70     //life points
-        hpPoints = 40
+        
         
         
         
@@ -31,7 +32,10 @@ class Wizard : GameCharacter {
     
     func heal(target : GameCharacter) {      //game character selected received health from weapon
         print("\(self.name) decided to Heal \(target.name) ")
-        target.healthPoints += self.hpPoints
+        target.healthPoints += self.weapon!.healingPoints
+        if let weapon = self.weapon as? Stick {
+            print("\(self.name) heal with \(weapon.name)")
+        }
         print("\(target.name) recovered \(self.hpPoints) HP")
         print("\(target.name) has now \(target.healthPoints) HP")    }
     
