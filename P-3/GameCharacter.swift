@@ -79,7 +79,33 @@ class GameCharacter  {
    }
     
     
-    
-    
+    func attackX2(target : GameCharacter) {      //game character selected received damage from weapon
+        print("Would you like to use your unique double attack skill?")
+        if let choice = readLine(){
+            switch choice{
+                case "1" :
+                    print("Yes")
+                    print("\(self.name) decided to Attack \(target.name) ! ⚔️")
+                    target.healthPoints -= self.hitPoints * 2
+                    print("\(target.name) has been hit and lost \(self.hitPoints) HP ! 💔")
+                    if target.healthPoints <= 0 {
+                        target.healthPoints = 0
+                        print("\(target.name) lost all his life and die! 💀")
+                    }else{
+                        print("\(target.name) has now \(target.healthPoints) HP... ❣️")
+                        
+                }
+            
+                case "2" :
+                    print("Not this turn")
+            default:
+                print(",")
+            }
+        }
+        
+    }
+        
+        
+        
     
 }

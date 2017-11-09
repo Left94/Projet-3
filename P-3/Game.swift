@@ -18,10 +18,15 @@ class Game {
     
 var player1 = Player(playerId: 1)
 var player2 = Player(playerId: 2)
+ 
+    
+// Method to start a new game
+    func startNewGame(){
+            print("Would you like to start to play?")
+    }
     
     
-    
-// func to describe the game to the player
+// Method to describe the game to the player
 func describeGame() {
     print(" ⚠️ How the Game works ⚠️ ")
     print()
@@ -32,7 +37,7 @@ func describeGame() {
     print()
     }
     
-    
+// Method to run a game
 func initGame() {
     //Player 1's turn to compose his own team
     player1.createTeam(enemy : player2)
@@ -45,18 +50,19 @@ func initGame() {
     
     while player1.playerAlive == true && player2.playerAlive == true{
         
-        //inform player 1 to do an action
+        
         if player2.playerAlive == true{
-        player1.playerTurnDisplay(playerId: 1)
-        player1.fight(enemy: player2)
+        //inform player 1 to do an action
+            player1.playerTurnDisplay(playerId: 1)
+            player1.fight(enemy: player2)
         
         }else {
             break
         }
         if player1.playerAlive == true {
-        //Inform player 2 to do an action
-        player2.playerTurnDisplay(playerId: 2)
-        player2.fight(enemy: player1)
+            //Inform player 2 to do an action
+            player2.playerTurnDisplay(playerId: 2)
+            player2.fight(enemy: player1)
         
         }else {
             break
