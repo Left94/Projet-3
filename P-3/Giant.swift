@@ -15,9 +15,9 @@ class Giant : GameCharacter {
     
     override init() {
         super.init()
-        weapon = Hammer()
-        id = 2
+        weapon = Hammer()     //weapon class
+        id = 2                //unique ID
         healthPoints = 130    //life point
-        
+        maxHP = healthPoints  //maximum life points
     }
 }

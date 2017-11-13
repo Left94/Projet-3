@@ -13,16 +13,13 @@ import Foundation
 
 class Hammer : Weapon {
     
-    var name = "Hammer"
+    var name = "✨IRON HAMMER✨"
     
     override init() {
         super.init()
-        damagePoints = 40
-        type = .DamagingWeapon
-        
-        
+        damagePoints = 50           //damages from weapon
+        type = .DamagingWeapon      //type of weapon
     }
-    
 }
     
     

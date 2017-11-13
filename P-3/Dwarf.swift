@@ -15,9 +15,9 @@ class Dwarf : GameCharacter {
     
     override init() {
         super.init()
-        weapon = Axe()
-        id = 1
+        weapon = Axe()                    //weapon class
+        id = 1                            //unique ID
         healthPoints = 50                 //life points
-        
+        maxHP = healthPoints              //maximum life points
     }
 }

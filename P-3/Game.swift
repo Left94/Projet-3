@@ -18,13 +18,40 @@ class Game {
     
 var player1 = Player(playerId: 1)
 var player2 = Player(playerId: 2)
- 
+
     
 // Method to start a new game
-    func startNewGame(){
-            print("Would you like to start to play?")
+    func stopToPLay(){
+        print("Thanks it was a pleasure to play with you!")
     }
     
+    func startNewGame()-> Bool{
+        var inputType = false
+        print("Would you like to start to play?")
+        print("Enter a number between 1 and 2: 💬 ")
+        print("1️⃣ ➡️ Yes lets play again !" )
+        print("2️⃣ ➡️ No thanks, I am done... " )
+        repeat {
+            
+            if let choice = readLine(){
+                switch choice {
+                    case "1" :
+                    inputType = true
+                    
+                case "2" :
+                    inputType = false
+                    stopGame.stopToPLay()
+                    
+                    
+            default:
+                inputType = false
+                print("Please choose a valid number")
+            }
+        }
+    }while !inputType
+      return inputType
+
+    }
     
 // Method to describe the game to the player
 func describeGame() {

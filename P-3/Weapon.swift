@@ -18,14 +18,10 @@ class Weapon {
         
         case HealingWeapon      //weapon' s type
         case DamagingWeapon
-    
     }
     
-    var damagePoints : Int = 0  //weapon' s stat
-    var healingPoints : Int = 0
+    var damagePoints : Double = 0  //weapon' s stat
+    var healingPoints : Double = 0
     var type : WeaponType?
-    
-    
-    
 }
 

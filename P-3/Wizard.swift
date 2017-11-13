@@ -17,26 +17,31 @@ class Wizard : GameCharacter {
     
     override init () {
         super.init()
-        weapon = Stick()
-        id = 4
+        weapon = Stick()      //weapon class
+        id = 4                //unique ID
         healthPoints = 70     //life points
-        
-        
+        maxHP = healthPoints  //maximum life points
         
         
     }
+  
+//METHODS
     
-    override func attack(target : GameCharacter) {      //game character selected received damage from weapon
+    override func attack(target : GameCharacter) {
+        
+        //game character selected received damage from weapon
         print("Wizard cannot attack, you lost your turn 😝")
     }
     
-    func heal(target : GameCharacter) {      //game character selected received health from weapon
+    func heal(target : GameCharacter) {
+        
+        //game character selected received health from weapon
         print("\(self.name) decided to Heal \(target.name) ")
         target.healthPoints += self.weapon!.healingPoints
         if let weapon = self.weapon as? Stick {
             print("\(self.name) heal with \(weapon.name)")
         }
-        print("\(target.name) recovered \(self.hpPoints) HP")
-        print("\(target.name) has now \(target.healthPoints) HP")    }
-    
+        print("\(target.name) recovered \(self.weapon!.healingPoints) HP")
+        print("\(target.name) has now \(target.healthPoints) HP")
+    }
 }

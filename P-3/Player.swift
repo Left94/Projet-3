@@ -18,10 +18,13 @@ import Foundation
 class Player {
     
     // VARIABLES
+    
     var teamMembers : [GameCharacter] = []
     var playerId : Int?
     var playerAlive = true
+    
     // INITIALIZERS
+    
     init(playerId : Int  ) {
         self.playerId = playerId
     }
@@ -161,7 +164,12 @@ class Player {
         print()
         // we only show the game characters till in game with a dynamic loop
         for (index, element) in teamMembers.enumerated() {
-            print(index + 1, ":", element.name,"which count", element.healthPoints, "HP ❣️")
+            
+            if element.healthPoints <= 20 {
+                print(index + 1, ":", element.name,"which is on FIRE 🔥 count", element.healthPoints, "HP ❣️ and can know use CRITICAL HIT !  🌪🔥 ")
+            }else{
+                print(index + 1, ":", element.name,"which count", element.healthPoints,"HP ❣️"," and can attack with",element.weapon!.damagePoints," ⚔️ ")
+            }
         }
         
         repeat {
@@ -181,9 +189,15 @@ class Player {
                         print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
                         
                     }else{
-                    print("You selected \(teamMembers[index].name) ! ✅ ")
-                    print("\(teamMembers[index].name) can attack with \(teamMembers[index].weapon!.damagePoints) pts of power ⚔️")
-                    print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
+                        if teamMembers[index].healthPoints <= 20{
+                            print("You selected \(teamMembers[index].name) wich is on FIRE 🔥 ! ✅ ")
+                            print("\(teamMembers[index].name) can now use Critical Attack 🌪  with \(teamMembers[index].weapon!.damagePoints * 1.5) pts of power ⚔️")
+                            
+                        }else{
+                            print("You selected \(teamMembers[index].name) ! ✅ ")
+                            print("\(teamMembers[index].name) can attack with \(teamMembers[index].weapon!.damagePoints) pts of power ⚔️")
+                            print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
+                        }
                     }
                     
                 }else{
@@ -216,9 +230,9 @@ class Player {
             let characterSelected = selectGameCharacter()
             let randomNumber = arc4random_uniform(100)
             
-            // we want 33 % chance to popup a chest with a new weapon inside
+            // we want 20 % of chance to popup a chest with a new weapon inside
             // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
-            if randomNumber < 99 {
+            if randomNumber < 20 {
                 characterSelected.openChest()
             }
             

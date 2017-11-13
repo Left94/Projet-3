@@ -13,17 +13,14 @@ import Foundation
 
 class Stick: Weapon {
     
-    var name = "Stick"
+    var name = "✨MAGIC STICK✨"
     
     override init() {
         
         super.init()
-        healingPoints = 20
-        type = .HealingWeapon
-        
-        
+        healingPoints = 20         //health points from weapon
+        type = .HealingWeapon      //type of weapon
     }
-        
 }
     
     

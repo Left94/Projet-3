@@ -13,17 +13,13 @@ import Foundation
 
 class Axe : Weapon {
     
-    var name = "Axe"
+    var name = "✨BONE AXE✨"
     
     override init() {
         super.init()
-        damagePoints = 70
-       
-        type = .DamagingWeapon
-        
-        
+        damagePoints = 35           //damages from weapon
+       type = .DamagingWeapon       //weapon type
     }
-    
 }
     
     

@@ -8,6 +8,15 @@
 
 import Foundation
 var play = Game()
-play.describeGame()
-play.initGame()
+var stopGame = Game()
+    while play.startNewGame() == true{
+            play.describeGame()
+            play.initGame()
+        
+    }
+
+
+
+
+
 

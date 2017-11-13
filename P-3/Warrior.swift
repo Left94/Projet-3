@@ -15,9 +15,9 @@ class Warrior : GameCharacter {
     
     override init() {
         super.init()
-        weapon = Sword()
-        id = 3
+        weapon = Sword()      //weapon class
+        id = 3                //unique id
         healthPoints = 100    //life point
-        
+        maxHP = healthPoints  //maximum life points
     }
 }
