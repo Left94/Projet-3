@@ -67,7 +67,7 @@ class Player {
         print()
         print("Player \(playerId!), please select your team's character : 🗡 🔨 💉 🔪")
         print()
-        print("Enter a number between 1 and 4: 💬 ")
+        print("Enter a number between 1️⃣ and 4️⃣ :  ")
         print()
         print("1️⃣ ➡️ Dwarf   ➡️  ➡️ Weapon: Axe,    Damage:  70   ⚔️   ➡️ Health: 50pts  ❣️" )
         print("2️⃣ ➡️ Giant   ➡️  ➡️ Weapon: Hammer, Damage:  40   ⚔️   ➡️ Health: 130pts ❣️ " )
@@ -100,11 +100,15 @@ class Player {
                 default:
                     inputType = false
                     print("Choice is wrong, please select a number between 1 and 4 ❌")
+                    print("💬....")
+                    print("💬..")
                     
                 }
             }
         } while !inputType!
         print("Player \(playerId!) , give a name to your character : 💬 ")
+        print("💬....")
+        print("💬..")
         
         
         // Player has to rename his selected game character
@@ -116,6 +120,8 @@ class Player {
             if nameAlreadyExist( equal : newCharacter.name, enemyTeam: enemy.teamMembers ) || newCharacter.name.isEmpty    {
                 inputName = false
                 print("Please enter a no-empty name who hasn t already used: ❌ ")
+                print("💬....")
+                print("💬..")
             }
             
         }while !inputName
@@ -161,6 +167,8 @@ class Player {
         var inputType : Bool
         
         print("Please enter a number to select a character 1️⃣ 2️⃣ 3️⃣.....: 💬")
+        print("💬....")
+        print("💬..")
         print()
         // we only show the game characters till in game with a dynamic loop
         for (index, element) in teamMembers.enumerated() {
@@ -173,8 +181,6 @@ class Player {
         }
         
         repeat {
-            
-            
             if let choice = Int(readLine()!) {
                 // Array indexes begin at 0
                 let index = choice - 1
@@ -203,11 +209,15 @@ class Player {
                 }else{
                     inputType = false
                     print(" Select an available character ❌ ")
+                    print("💬....")
+                    print("💬..")
                 
                 }
             }else{
                 inputType = false
                 print(" Select an available character ❌ ")
+                print("💬....")
+                print("💬..")
             }
             
             
@@ -215,10 +225,6 @@ class Player {
         } while !inputType
         return characterSelected!
     }
-    
-        
-        
-    
     
     // Method to engage the fight
     func fight (enemy : Player) {
@@ -247,6 +253,8 @@ class Player {
             }else{
                 // ...we ask player to choose a target in player' s 2 team to attack
                 print("Select a character to attack in the opponent team 🎯 : ")
+                print("💬....")
+                print("💬..")
                 
                 // we call tealIsAlive method to see if there is at least one character alive in the opponent's team
                 if teamIsAlive(player: enemy)  {
@@ -261,7 +269,8 @@ class Player {
                         enemy.teamMembers.remove(at: characterToRemove)
                         if enemy.teamMembers .isEmpty{
                             playerAlive = false
-                            print("Congratulation Player \(String(describing: self.playerId!))👏👏 You Win ‼️")
+                            print("Congratulation Player \(String(describing: self.playerId!)) 👏👏 You Win ‼️")
+                            print()
                             print(" ❌ Game is over ❌ ")
                         } 
                     }

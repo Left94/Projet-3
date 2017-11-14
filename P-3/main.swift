@@ -9,12 +9,23 @@
 import Foundation
 var play = Game()
 var stopGame = Game()
-    while play.startNewGame() == true{
+var stopProgramm = false
+
+
+
+print()
+
+while stopProgramm == false {
+    if play.startNewGame() == true{
+        repeat {
             play.describeGame()
             play.initGame()
-        
+        }while !play.startNewGame()
+    }else{
+        play.stopToPLay()
+        stopProgramm = false
     }
-
+}
 
 
 
