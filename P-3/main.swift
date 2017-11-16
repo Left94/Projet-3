@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 var play = Game()
 var stopGame = Game()
 var stopProgramm = false
@@ -14,7 +15,7 @@ var stopProgramm = false
 
 
 print()
-
+// Game' s loop
 while stopProgramm == false {
     if play.startNewGame() == true{
         repeat {

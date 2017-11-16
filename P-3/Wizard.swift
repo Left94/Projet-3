@@ -19,7 +19,7 @@ class Wizard : GameCharacter {
         super.init()
         weapon = Stick()      //weapon class
         id = 4                //unique ID
-        healthPoints = 70     //life points
+        healthPoints = 60     //life points
         maxHP = healthPoints  //maximum life points
         
         

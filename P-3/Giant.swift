@@ -17,7 +17,7 @@ class Giant : GameCharacter {
         super.init()
         weapon = Hammer()     //weapon class
         id = 2                //unique ID
-        healthPoints = 130    //life point
+        healthPoints = 120    //life point
         maxHP = healthPoints  //maximum life points
     }
 }

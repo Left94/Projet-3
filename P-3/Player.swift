@@ -69,10 +69,10 @@ class Player {
         print()
         print("Enter a number between 1️⃣ and 4️⃣ :  ")
         print()
-        print("1️⃣ ➡️ Dwarf   ➡️  ➡️ Weapon: Axe,    Damage:  70   ⚔️   ➡️ Health: 50pts  ❣️" )
-        print("2️⃣ ➡️ Giant   ➡️  ➡️ Weapon: Hammer, Damage:  40   ⚔️   ➡️ Health: 130pts ❣️ " )
-        print("3️⃣ ➡️ Warrior ➡️  ➡️ Weapon: Sword,  Damage:  50   ⚔️   ➡️ Health: 90pts  ❣️ " )
-        print("4️⃣ ➡️ Wizard  ➡️  ➡️ Weapon: Stick,  Recover: 40   💉   ➡️ Health: 70pts  ❣️ " )
+        print("1️⃣ ➡️ Dwarf   ➡️  ➡️ Weapon: Axe,    Damage:  35   ⚔️   ➡️ Health: 70pts  ❣️" )
+        print("2️⃣ ➡️ Giant   ➡️  ➡️ Weapon: Hammer, Damage:  50   ⚔️   ➡️ Health: 120pts ❣️ " )
+        print("3️⃣ ➡️ Warrior ➡️  ➡️ Weapon: Sword,  Damage:  45   ⚔️   ➡️ Health: 100pts  ❣️ " )
+        print("4️⃣ ➡️ Wizard  ➡️  ➡️ Weapon: Stick,  Recover: 20   💉   ➡️ Health: 60pts  ❣️ " )
         
         
         var newCharacter = GameCharacter()
@@ -176,7 +176,7 @@ class Player {
             if element.healthPoints <= 20 {
                 print(index + 1, ":", element.name,"which is on FIRE 🔥 count", element.healthPoints, "HP ❣️ and can know use CRITICAL HIT !  🌪🔥 ")
             }else{
-                print(index + 1, ":", element.name,"which count", element.healthPoints,"HP ❣️"," and can attack with",element.weapon!.damagePoints," ⚔️ ")
+                print(index + 1, ":", element.name,"which count", element.healthPoints,"HP ❣️")
             }
         }
         
