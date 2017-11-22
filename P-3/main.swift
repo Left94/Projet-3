@@ -9,7 +9,6 @@
 import Foundation
 
 var play = Game()
-var stopGame = Game()
 var stopProgramm = false
 
 

@@ -46,10 +46,10 @@ class GameCharacter  {
             if let weapon = self.weapon as? Sword {
                 print("\(self.name) is on Fire 🔥 and attack with \(weapon.name)")
             }
-            if let weapon = self.weapon as? Axe {
+           else if let weapon = self.weapon as? Axe {
                 print("\(self.name) is on Fire 🔥 and attack with \(weapon.name)")
             }
-            if let weapon = self.weapon as? Hammer {
+           else if let weapon = self.weapon as? Hammer {
                 print("\(self.name) is on Fire 🔥 and attack with \(weapon.name)")
             }
             
@@ -71,10 +71,10 @@ class GameCharacter  {
         if let weapon = self.weapon as? Sword {
             print("\(self.name) attack with \(weapon.name)")
         }
-        if let weapon = self.weapon as? Axe {
+        else if let weapon = self.weapon as? Axe {
             print("\(self.name) attack with \(weapon.name)")
         }
-        if let weapon = self.weapon as? Hammer {
+       else if let weapon = self.weapon as? Hammer {
             print("\(self.name) attack with \(weapon.name)")
         }
         
@@ -104,32 +104,40 @@ class GameCharacter  {
                     weapon.name = " ✨SWORD FROM CHEST✨"
                     weapon.damagePoints = 55
                 }
-                print("\(self.name) found a ✨NEW SWORD✨ with a 10 bonus points attack! 💪 " )
-                print("\(self.name) equip now his new weapon ! ✨⚔️✨ ")
+                print("""
+                \(self.name) found a ✨NEW SWORD✨ with a 10 bonus points attack! 💪
+                \(self.name) equip now his new weapon ! ✨⚔️✨
+                """)
              case is Dwarf :
                 weaponInsideChest = Axe()
                 if let weapon = weaponInsideChest as? Axe{
                     weapon.name = "✨AXE FROM CHEST✨"
                     weapon.damagePoints = 45
                 }
-                print("\(self.name) found a ✨NEW AXE✨ with a 10 bonus points attack! 💪" )
-                print("\(self.name) equip now his new weapon ! ✨⚔️✨ ")
+                print("""
+                \(self.name) found a ✨NEW AXE✨ with a 10 bonus points attack! 💪
+                \(self.name) equip now his new weapon ! ✨⚔️✨
+                """)
              case is Giant :
                 weaponInsideChest = Hammer()
                 if let weapon = weaponInsideChest as? Hammer{
                     weapon.name = "✨HAMMER FROM CHEST✨"
                     weapon.damagePoints = 60
                 }
-                print("\(self.name) found a ✨NEW HAMMER✨ with a 10 bonus points attack! 💪" )
-                print("\(self.name) equip now his new weapon ! ✨⚔️✨ ")
+                print("""
+                \(self.name) found a ✨NEW HAMMER✨ with a 10 bonus points attack! 💪
+                \(self.name) equip now his new weapon ! ✨⚔️✨
+                """)
              case is Wizard :
                 weaponInsideChest = Stick()
                 if let weapon = weaponInsideChest as? Stick{
                     weapon.name = "✨STICK FROM CHEST✨"
                     weapon.healingPoints = 30
                 }
-                print("\(self.name) found a ✨NEW STICK✨ with a 10 bonus points healing! 💪" )
-                print("\(self.name) equip now his new weapon ! ✨💉✨ ")
+                print("""
+                \(self.name) found a ✨NEW STICK✨ with a 10 bonus points healing! 💪
+                \(self.name) equip now his new weapon ! ✨💉✨
+                """)
              default:
                 print("The chest was empty")
        }

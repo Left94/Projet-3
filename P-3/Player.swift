@@ -65,14 +65,14 @@ class Player {
     // Method to select the game characters for the team player
     func chooseGameCharacter (enemy : Player) {
         print()
-        print("Player \(playerId!), please select your team's character : 🗡 🔨 💉 🔪")
-        print()
-        print("Enter a number between 1️⃣ and 4️⃣ :  ")
-        print()
-        print("1️⃣ ➡️ Dwarf   ➡️  ➡️ Weapon: Axe,    Damage:  35   ⚔️   ➡️ Health: 70pts  ❣️" )
-        print("2️⃣ ➡️ Giant   ➡️  ➡️ Weapon: Hammer, Damage:  50   ⚔️   ➡️ Health: 120pts ❣️ " )
-        print("3️⃣ ➡️ Warrior ➡️  ➡️ Weapon: Sword,  Damage:  45   ⚔️   ➡️ Health: 100pts  ❣️ " )
-        print("4️⃣ ➡️ Wizard  ➡️  ➡️ Weapon: Stick,  Recover: 20   💉   ➡️ Health: 60pts  ❣️ " )
+        print("""
+        Player \(playerId!), please select your team's character : 🗡 🔨 💉 🔪
+        Enter a number between 1️⃣ and 4️⃣ :
+        1️⃣ ➡️ Dwarf   ➡️  ➡️ Weapon: Axe,    Damage:  35   ⚔️   ➡️ Health: 70pts  ❣️
+        2️⃣ ➡️ Giant   ➡️  ➡️ Weapon: Hammer, Damage:  50   ⚔️   ➡️ Health: 120pts ❣️
+        3️⃣ ➡️ Warrior ➡️  ➡️ Weapon: Sword,  Damage:  45   ⚔️   ➡️ Health: 100pts  ❣️
+        4️⃣ ➡️ Wizard  ➡️  ➡️ Weapon: Stick,  Recover: 20   💉   ➡️ Health: 60pts  ❣️
+        """ )
         
         
         var newCharacter = GameCharacter()
@@ -99,16 +99,20 @@ class Player {
                     print("Player \(playerId!) selected Wizard ✅")
                 default:
                     inputType = false
-                    print("Choice is wrong, please select a number between 1 and 4 ❌")
-                    print("💬....")
-                    print("💬..")
+                    print("""
+                    Choice is wrong, please select a number between 1 and 4 ❌
+                    💬....
+                    💬..
+                    """)
                     
                 }
             }
         } while !inputType!
-        print("Player \(playerId!) , give a name to your character : 💬 ")
-        print("💬....")
-        print("💬..")
+        print("""
+        Player \(playerId!) , give a name to your character : 💬
+        💬....
+        💬..
+        """)
         
         
         // Player has to rename his selected game character
@@ -119,9 +123,11 @@ class Player {
             // Call of the method nameAlreadyExist() to see if the name is unique
             if nameAlreadyExist( equal : newCharacter.name, enemyTeam: enemy.teamMembers ) || newCharacter.name.isEmpty    {
                 inputName = false
-                print("Please enter a no-empty name who hasn t already used: ❌ ")
-                print("💬....")
-                print("💬..")
+                print("""
+                Please enter a no-empty name who hasn t already used: ❌
+                💬...
+                💬..
+                """)
             }
             
         }while !inputName
@@ -166,9 +172,11 @@ class Player {
         var characterSelected : GameCharacter?
         var inputType : Bool
         
-        print("Please enter a number to select a character 1️⃣ 2️⃣ 3️⃣.....: 💬")
-        print("💬....")
-        print("💬..")
+        print("""
+        Please enter a number to select a character 1️⃣ 2️⃣ 3️⃣.....: 💬
+        💬....
+        💬..
+        """)
         print()
         // we only show the game characters till in game with a dynamic loop
         for (index, element) in teamMembers.enumerated() {
@@ -190,34 +198,44 @@ class Player {
                     characterSelected!.id = index
                     inputType = true
                     if characterSelected is Wizard{
-                        print("You selected \(teamMembers[index].name) ! ✅ ")
-                        print("\(teamMembers[index].name) can heal with  \(teamMembers[index].weapon!.healingPoints) heal points 💉")
-                        print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
+                        print("""
+                        You selected \(teamMembers[index].name) ! ✅
+                        \(teamMembers[index].name) can heal with  \(teamMembers[index].weapon!.healingPoints) heal points 💉
+                        \(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️
+                        """)
                         
                     }else{
                         if teamMembers[index].healthPoints <= 20{
-                            print("You selected \(teamMembers[index].name) wich is on FIRE 🔥 ! ✅ ")
-                            print("\(teamMembers[index].name) can now use Critical Attack 🌪  with \(teamMembers[index].weapon!.damagePoints * 1.5) pts of power ⚔️")
+                            print("""
+                            You selected \(teamMembers[index].name) wich is on FIRE 🔥 ! ✅
+                            \(teamMembers[index].name) can now use Critical Attack 🌪  with \(teamMembers[index].weapon!.damagePoints * 1.5) pts of power ⚔️
+                            """)
                             
                         }else{
-                            print("You selected \(teamMembers[index].name) ! ✅ ")
-                            print("\(teamMembers[index].name) can attack with \(teamMembers[index].weapon!.damagePoints) pts of power ⚔️")
-                            print("\(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️")
+                            print("""
+                            You selected \(teamMembers[index].name) ! ✅
+                            \(teamMembers[index].name) can attack with \(teamMembers[index].weapon!.damagePoints) pts of power ⚔️
+                            \(teamMembers[index].name) have \(teamMembers[index].healthPoints) HP ❣️
+                            """)
                         }
                     }
                     
                 }else{
                     inputType = false
-                    print(" Select an available character ❌ ")
-                    print("💬....")
-                    print("💬..")
+                    print("""
+                    Select an available character ❌
+                    💬....
+                    💬..
+                    """)
                 
                 }
             }else{
                 inputType = false
-                print(" Select an available character ❌ ")
-                print("💬....")
-                print("💬..")
+                print("""
+                Select an available character ❌
+                💬....
+                💬..
+                """)
             }
             
             
@@ -236,9 +254,9 @@ class Player {
             let characterSelected = selectGameCharacter()
             let randomNumber = arc4random_uniform(100)
             
-            // we want 20 % of chance to popup a chest with a new weapon inside
-            // if generated number is between 0 and 20 the chest popup and the game character will equip a new weapon
-            if randomNumber < 20 {
+            // we want 30 % of chance to popup a chest with a new weapon inside
+            // if generated number is between 0 and 30 the chest popup and the game character will equip a new weapon
+            if randomNumber < 30 {
                 characterSelected.openChest()
             }
             
@@ -252,9 +270,11 @@ class Player {
                 // else if the character selected is another one else exept wizard then ....
             }else{
                 // ...we ask player to choose a target in player' s 2 team to attack
-                print("Select a character to attack in the opponent team 🎯 : ")
-                print("💬....")
-                print("💬..")
+                print("""
+                Select a character to attack in the opponent team 🎯 :
+                💬....
+                💬..
+                """)
                 
                 // we call tealIsAlive method to see if there is at least one character alive in the opponent's team
                 if teamIsAlive(player: enemy)  {
@@ -269,9 +289,11 @@ class Player {
                         enemy.teamMembers.remove(at: characterToRemove)
                         if enemy.teamMembers .isEmpty{
                             playerAlive = false
-                            print("Congratulation Player \(String(describing: self.playerId!)) 👏👏 You Win ‼️")
-                            print()
-                            print(" ❌ Game is over ❌ ")
+                            print("""
+                            Congratulation Player \(String(describing: self.playerId!)) 👏👏 You Win ‼️
+                            ❌ Game is over ❌
+                                
+                            """)
                         } 
                     }
                 }

@@ -35,16 +35,14 @@ class Game {
     func startNewGame()-> Bool{
         var inputType : Bool?
         var wantToPlay : Bool?
-        
-        print()
-        print("🎲 Would you like to start to play ? 🎲")
-        print()
-        print("Enter a number between 1️⃣ and 2️⃣: 💬 ")
-        print()
-        print("1️⃣ ➡️ Yes, lets play ! " )
-        print("2️⃣ ➡️ No thanks, I am done... " )
-        print("💬....")
-        print("💬..")
+        print("""
+        🎲 Would you like to start to play ? 🎲
+        Enter a number between 1️⃣ and 2️⃣: 💬
+        1️⃣ ➡️ Yes, lets play !
+        2️⃣ ➡️ No thanks, I am done...
+        💬....
+        💬..
+        """)
     repeat{
             inputType = true
             let input = readLine()!
@@ -56,15 +54,19 @@ class Game {
                     wantToPlay = false
                     
             default:
-                print("❌ Please enter a valid number between 1️⃣ and 2️⃣ ! ❌")
-                print("💬....")
-                print("💬..")
+                print("""
+                ❌ Please enter a valid number between 1️⃣ and 2️⃣ ! ❌
+                💬....
+                💬..
+                """)
                     inputType = false
             }
             }else{
-                print("❌ Please enter a valid number between 1️⃣ and 2️⃣ ! ❌")
-                print("💬....")
-                print("💬..")
+                print("""
+                ❌ Please enter a valid number between 1️⃣ and 2️⃣ ! ❌
+                💬....
+                💬..
+                """)
                     inputType = false
             }
     }while !inputType!
@@ -75,13 +77,13 @@ class Game {
     
     // Method to describe the game to the player
     func describeGame() {
-        print(" ⚠️ How the Game works ⚠️ ")
-        print()
-        print("This game is composed of two players, each player have to compose his own team by selected 3 game characters in a list of 4 characters")
-        print("The first one who kill all the others player' s team win the game.")
-        print()
-        print("One rule : kill em all !! ☠️ ")
-        print()
+        print("""
+        ⚠️ How the Game works ⚠️
+        This game is composed of two players, each player have to compose his own team by selected 3 game characters in a list of 4 characters
+        The first one who kill all the others player' s team win the game.
+        One rule : kill em all !! ☠️
+        """)
+
     }
     
     // Method to run a game
