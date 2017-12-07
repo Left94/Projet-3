@@ -8,22 +8,21 @@
 
 import Foundation
 
-var play = Game()
-var stopProgramm = false
 
+var startProgram = true
 
 
 print()
 // Game' s loop
-while stopProgramm == false {
-    if play.startNewGame() == true{
-        repeat {
-            play.describeGame()
-            play.initGame()
-        }while !play.startNewGame()
-    }else{
+while startProgram {
+        let play = Game()
+        play.describeGame()
+        play.initGame()
+        startProgram = play.startNewGame()
+    
+    if !startProgram {
         play.stopToPLay()
-        stopProgramm = false
+    
     }
 }
 

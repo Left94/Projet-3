@@ -71,8 +71,6 @@ class Game {
             }
     }while !inputType!
             return wantToPlay!
-        
-        
     }
     
     // Method to describe the game to the player

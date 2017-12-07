@@ -17,7 +17,7 @@ class Sword : Weapon {
         
     override init() {
             super.init()
-            damagePoints = 45          //damages from weapon
+            damagePoints = 10          //damages from weapon
             type = .DamagingWeapon     //type of weapon
     }
 }

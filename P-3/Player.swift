@@ -50,12 +50,12 @@ class Player {
     func nameAlreadyExist( equal name : String , enemyTeam :[GameCharacter])-> Bool {
         var alreadyExist = false
         for gameCharacterExist in enemyTeam {
-            if name == gameCharacterExist.name {
+            if name.lowercased() == gameCharacterExist.name.lowercased() {
                 alreadyExist = true
             }
         }
         for gameCharacterExist in teamMembers {
-            if name == gameCharacterExist.name {
+            if name.lowercased() == gameCharacterExist.name.lowercased() {
                 alreadyExist = true
             }
         }
@@ -270,11 +270,9 @@ class Player {
                 // else if the character selected is another one else exept wizard then ....
             }else{
                 // ...we ask player to choose a target in player' s 2 team to attack
-                print("""
-                Select a character to attack in the opponent team 🎯 :
-                💬....
-                💬..
-                """)
+                print("Select a character to attack in the opponent team 🎯 :")
+                
+                
                 
                 // we call tealIsAlive method to see if there is at least one character alive in the opponent's team
                 if teamIsAlive(player: enemy)  {

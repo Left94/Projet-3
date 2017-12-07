@@ -102,7 +102,7 @@ class GameCharacter  {
                 weaponInsideChest = Sword()
                 if let weapon = weaponInsideChest as? Sword{
                     weapon.name = " ✨SWORD FROM CHEST✨"
-                    weapon.damagePoints = 55
+                    weapon.damagePoints = 20
                 }
                 print("""
                 \(self.name) found a ✨NEW SWORD✨ with a 10 bonus points attack! 💪
@@ -112,7 +112,7 @@ class GameCharacter  {
                 weaponInsideChest = Axe()
                 if let weapon = weaponInsideChest as? Axe{
                     weapon.name = "✨AXE FROM CHEST✨"
-                    weapon.damagePoints = 45
+                    weapon.damagePoints = 140
                 }
                 print("""
                 \(self.name) found a ✨NEW AXE✨ with a 10 bonus points attack! 💪
